@@ -1,0 +1,44 @@
+{
+  viewer {
+    repositories(
+      first: 100
+      isFork: false
+      privacy: PUBLIC
+      orderBy: { field: PUSHED_AT, direction: DESC }
+    ) {
+      nodes {
+        url
+        name
+        stargazerCount
+        description
+        isArchived
+        languages(first: 100, orderBy: { field: SIZE, direction: DESC }) {
+          nodes {
+            name
+            color
+          }
+        }
+      }
+    }
+
+    repositoriesContributedTo(
+      first: 100
+      orderBy: { field: STARGAZERS, direction: DESC }
+      contributionTypes: [COMMIT, PULL_REQUEST, REPOSITORY]
+      privacy: PUBLIC
+    ) {
+      totalCount
+      nodes {
+        url
+        name: nameWithOwner
+        description
+        languages(first: 100, orderBy: { field: SIZE, direction: DESC }) {
+          nodes {
+            name
+            color
+          }
+        }
+      }
+    }
+  }
+}

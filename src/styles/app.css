@@ -1,0 +1,17 @@
+@import "./tailwind.css";
+@import "./fonts.css";
+@import "./section.css";
+
+@layer base {
+  body {
+    @apply bg-gray-50;
+  }
+}
+
+@layer components {
+  #svelte {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+}

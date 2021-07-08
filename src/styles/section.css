@@ -1,0 +1,25 @@
+@layer components {
+  section {
+    @apply relative flex flex-col;
+    height: 100vh;
+    scroll-snap-align: start;
+  }
+
+  .section-header {
+    @apply px-3 pb-3 font-bold;
+  }
+
+  .section-header.section-header--1 {
+    @apply pt-6 text-4xl text-gray-700;
+    font-family: "Bitter";
+  }
+
+  .section-header.section-header--2 {
+    @apply text-2xl tracking-wider text-gray-900;
+    font-family: "Gilda Display";
+  }
+
+  .section-body {
+    @apply relative h-full overflow-auto;
+  }
+}

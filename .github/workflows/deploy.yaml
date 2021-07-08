@@ -1,0 +1,36 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Cache multiple paths
+        uses: actions/cache@v2
+        with:
+          path: |
+            node_modules
+            .svelte-kit
+          key: ${{ runner.os }}-${{ github.sha }}
+
+      - name: Install and Build 🔧
+        run: |
+          mkdir ~/.npm-global
+          NPM_CONFIG_PREFIX=~/.npm-global npm install -g pnpm
+          export PATH=~/.npm-global/bin:$PATH
+          pnpm install
+          VITE_GH_OAUTH_TOKEN=${{ secrets.VITE_GH_OAUTH_TOKEN }} pnpm build
+          find ./build -name "*.js" | xargs rm
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: build
