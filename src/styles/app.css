@@ -1,6 +1,7 @@
 @import "./tailwind.css";
 @import "./fonts.css";
 @import "./section.css";
+@import "./100vh-ios-fix.css";
 
 @layer base {
   body {

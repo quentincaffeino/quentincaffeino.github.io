@@ -29,10 +29,10 @@
   <title>quentincaffeino</title>
 </svelte:head>
 
-<section>
+<section class="h-screen">
   <MainSection />
 </section>
 
-<section>
+<section class="h-screen">
   <ProjectsSection {projects} />
 </section>
