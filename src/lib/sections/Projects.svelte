@@ -14,7 +14,7 @@
 
 <h2 class="section-header section-header--1">Projects</h2>
 
-<div class="mb-24 section-body">
+<div class="pb-24 section-body">
   <h3 class="sticky top-0 z-10 bg-gray-50 section-header section-header--2">
     Personal
   </h3>
@@ -37,8 +37,3 @@
     />
   </div>
 </div>
-
-<!-- Bottom gradient -->
-<div
-  class="absolute z-20 w-full h-6 bottom-24 bg-gradient-to-t from-gray-50"
-/>
