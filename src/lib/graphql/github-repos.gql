@@ -2,7 +2,6 @@
   viewer {
     repositories(
       first: 100
-      isFork: false
       privacy: PUBLIC
       orderBy: { field: PUSHED_AT, direction: DESC }
     ) {
@@ -12,6 +11,7 @@
         stargazerCount
         description
         isArchived
+        isFork
         languages(first: 100, orderBy: { field: SIZE, direction: DESC }) {
           nodes {
             name

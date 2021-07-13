@@ -3,6 +3,13 @@
 
   const sortArchivedToEnd = (a, b) =>
     a.isArchived ? 1 : b.isArchived ? -1 : 0;
+
+  const filterOutForksExceptions = [
+    "JavaToUML", // This is actually a contribution I never made bc owners project is basically dead
+    "omnipay-gopay", // Same as with JavaToUML
+  ];
+  const filterOutForks = (project) =>
+    filterOutForksExceptions.indexOf(project.name) !== -1 || !project.isFork;
 </script>
 
 <script>
@@ -22,6 +29,7 @@
   <div class="mb-6">
     <ProjectList
       projects={projects?.data?.viewer?.repositories?.nodes
+        ?.filter(filterOutForks)
         ?.sort(sortByStars)
         ?.sort(sortArchivedToEnd)}
     />
