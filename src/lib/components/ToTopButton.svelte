@@ -18,14 +18,13 @@
 <style>
   /* Taken from animate.css library */
   :root {
-    --animate-duration: 1s;
-    --animate-delay: 1s;
+    --animate-duration: 0.5s;
     --animate-repeat: 1;
   }
 
   .animate__animated--bounce:focus {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
     -webkit-animation-duration: var(--animate-duration);
     animation-duration: var(--animate-duration);
     -webkit-animation-fill-mode: both;
