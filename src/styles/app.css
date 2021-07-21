@@ -4,7 +4,10 @@
 @import "./100vh-ios-fix.css";
 
 @layer base {
-  body {
+  html,
+  body,
+  #svelte {
     @apply bg-gray-50;
+    scroll-behavior: smooth;
   }
 }

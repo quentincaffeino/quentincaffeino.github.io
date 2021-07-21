@@ -20,6 +20,7 @@
 <script>
   import MainSection from "$lib/sections/Main.svelte";
   import ProjectsSection from "$lib/sections/Projects.svelte";
+  import ToTopButton from "$lib/components/ToTopButton.svelte";
 
   // @hmr:keep
   export let projects;
@@ -33,6 +34,10 @@
   <MainSection />
 </section>
 
-<section>
-  <ProjectsSection {projects} />
-</section>
+<div class="">
+  <section>
+    <ProjectsSection {projects} />
+  </section>
+
+  <ToTopButton />
+</div>

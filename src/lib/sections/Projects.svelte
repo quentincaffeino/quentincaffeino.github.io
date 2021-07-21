@@ -23,7 +23,7 @@
   Projects
 </h2>
 
-<div class="pb-24 section-body">
+<div class="section-body">
   <h3 class="sticky z-10 bg-gray-50 section-header section-header--2">
     Personal
   </h3>
