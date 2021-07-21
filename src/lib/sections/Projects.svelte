@@ -19,10 +19,12 @@
   export let projects;
 </script>
 
-<h2 class="section-header section-header--1">Projects</h2>
+<h2 class="sticky top-0 z-10 bg-gray-50 section-header section-header--1">
+  Projects
+</h2>
 
 <div class="pb-24 section-body">
-  <h3 class="sticky top-0 z-10 bg-gray-50 section-header section-header--2">
+  <h3 class="sticky z-10 bg-gray-50 section-header section-header--2">
     Personal
   </h3>
 
@@ -35,7 +37,7 @@
     />
   </div>
 
-  <h3 class="sticky top-0 z-10 bg-gray-50 section-header section-header--2">
+  <h3 class="sticky z-10 bg-gray-50 section-header section-header--2">
     Contributions
   </h3>
 
@@ -45,3 +47,13 @@
     />
   </div>
 </div>
+
+<style>
+  .section-header--1 {
+    height: 4.75rem;
+  }
+
+  .section-header--2 {
+    top: 4.75rem;
+  }
+</style>

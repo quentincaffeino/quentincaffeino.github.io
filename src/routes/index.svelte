@@ -33,6 +33,6 @@
   <MainSection />
 </section>
 
-<section class="h-screen">
+<section>
   <ProjectsSection {projects} />
 </section>
