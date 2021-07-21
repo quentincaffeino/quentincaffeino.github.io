@@ -6,7 +6,7 @@
   <div class="self-end inline-block">
     <a
       href="#"
-      onclick="event.preventDefault();window.scrollTo(0,0);setTimeout(()=>document.body.focus(),500);"
+      onclick="event.preventDefault();window.scrollTo(0,0);setTimeout(()=>document.activeElement.blur(),500);"
       rel="external"
       class="block p-2 text-gray-600 bg-white border rounded-full shadow-xl fill-current animate__animated--bounce"
     >
