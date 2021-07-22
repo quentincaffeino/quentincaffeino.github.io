@@ -17,6 +17,16 @@
 
   /** @type {Object} */
   export let projects;
+
+  let personalProjects;
+  $: personalProjects =
+    projects?.data?.viewer?.repositories?.nodes
+      ?.filter(filterOutForks)
+      ?.sort(sortByStars)
+      ?.sort(sortArchivedToEnd) || [];
+
+  let contributionProjects =
+    projects?.data?.viewer?.repositoriesContributedTo?.nodes || [];
 </script>
 
 <h2 class="sticky top-0 z-10 bg-gray-50 section-header section-header--1">
@@ -24,28 +34,25 @@
 </h2>
 
 <div class="section-body">
-  <h3 class="sticky z-10 bg-gray-50 section-header section-header--2">
-    Personal
-  </h3>
+  {#if personalProjects.length}
+    <h3 class="sticky z-10 bg-gray-50 section-header section-header--2">
+      Personal
+    </h3>
 
-  <div class="mb-6">
-    <ProjectList
-      projects={projects?.data?.viewer?.repositories?.nodes
-        ?.filter(filterOutForks)
-        ?.sort(sortByStars)
-        ?.sort(sortArchivedToEnd)}
-    />
-  </div>
+    <div class="mb-6">
+      <ProjectList projects={personalProjects} />
+    </div>
+  {/if}
 
-  <h3 class="sticky z-10 bg-gray-50 section-header section-header--2">
-    Contributions
-  </h3>
+  {#if contributionProjects.length}
+    <h3 class="sticky z-10 bg-gray-50 section-header section-header--2">
+      Contributions
+    </h3>
 
-  <div class="mb-6">
-    <ProjectList
-      projects={projects?.data?.viewer?.repositoriesContributedTo?.nodes}
-    />
-  </div>
+    <div class="mb-6">
+      <ProjectList projects={contributionProjects} />
+    </div>
+  {/if}
 </div>
 
 <style>

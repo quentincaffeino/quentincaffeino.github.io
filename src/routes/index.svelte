@@ -35,9 +35,11 @@
 </section>
 
 <div class="">
-  <section>
-    <ProjectsSection {projects} />
-  </section>
+  {#if Object.keys(projects).length}
+    <section>
+      <ProjectsSection {projects} />
+    </section>
+  {/if}
 
   <ToTopButton />
 </div>
