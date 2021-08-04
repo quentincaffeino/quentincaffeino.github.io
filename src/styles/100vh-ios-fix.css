@@ -1,5 +1,6 @@
 /* Generated using https://gist.github.com/BenMorel/e9e34c08360ebbbd0634 */
 
+/* iPad (all versions) */
 @media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .h-screen {
     height: 1024px;
@@ -12,6 +13,7 @@
   }
 }
 
+/* iPhone 4 */
 @media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 480px) and (orientation: portrait) {
   .h-screen {
     height: 480px;
@@ -24,6 +26,7 @@
   }
 }
 
+/* iPhone 5, 5C, 5S */
 @media only screen and (-webkit-min-device-pixel-ratio: 1) and (device-width: 320px) and (device-height: 568px) and (orientation: portrait) {
   .h-screen {
     height: 568px;

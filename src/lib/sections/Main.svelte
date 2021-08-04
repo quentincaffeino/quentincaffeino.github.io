@@ -5,7 +5,7 @@
 
 <div class="section-body">
   <div
-    class="flex flex-col items-center max-w-full min-w-[75%] sm:flex-row h-full max-h-[50%] absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2"
+    class="flex flex-col items-center max-w-full min-w-[75%] sm:flex-row h-full max-h-[50%] absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 iphone5:static iphone5:mt-4 iphone5:translate-y-0 iphone5:translate-x-0"
   >
     <div class="">
       <img
