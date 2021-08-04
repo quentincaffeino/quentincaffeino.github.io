@@ -7,7 +7,8 @@
    * @type {import('@sveltejs/kit').Load}
    */
   export async function load({ page, fetch, session, context }) {
-    const projects = await fetchGithubData({ fetch });
+    const projects =
+      (await fetchGithubData({ fetch }).catch(console.error)) || {};
 
     return {
       props: {
