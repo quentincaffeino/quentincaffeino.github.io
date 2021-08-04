@@ -49,7 +49,7 @@
       Contributions
     </h3>
 
-    <div class="mb-6">
+    <div>
       <ProjectList projects={contributionProjects} />
     </div>
   {/if}
