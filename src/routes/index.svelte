@@ -45,7 +45,7 @@
     <span>
       powered by 🔥
       <a
-        class="border-b-[1px] border-[#ff3e00]"
+        class="border-b-[1px] border-[#ff3e00] hover:text-[#ff3e00]"
         href="https://github.com/sveltejs/kit"
         rel="noreferrer noopener"
         target="_blank"
