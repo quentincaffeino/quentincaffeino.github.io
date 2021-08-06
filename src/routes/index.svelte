@@ -40,7 +40,7 @@
 <footer
   class="fixed bottom-0 w-full p-1 pb-4 text-sm text-center text-gray-700 transform -translate-x-1/2 sm:pb-2 left-1/2"
 >
-  <div class="censorable-made-with-text inline-block pb-2 sm:pb-0">
+  <div class="inline-block pb-2 censorable-made-with-text sm:pb-0">
     <span>made with</span>
     <span class="hidden">☕ ☕</span>
     ☕
