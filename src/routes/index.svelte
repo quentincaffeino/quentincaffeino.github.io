@@ -31,11 +31,20 @@
   <title>quentincaffeino</title>
 </svelte:head>
 
-<!-- footer is above everything so that it displays below any blocks that are on the page -->
+<section class="h-screen">
+  <MainSection />
+</section>
+
+<!-- footer is below main because I need it to be above for censor hover to work,
+  and above everything else so that it displays below any other blocks -->
 <footer
   class="fixed bottom-0 w-full p-1 pb-4 text-sm text-center text-gray-700 transform -translate-x-1/2 sm:pb-2 left-1/2"
 >
-  <span class="inline-block pb-2 sm:pb-0">made with ☕</span>
+  <div class="censorable-made-with-text inline-block pb-2 sm:pb-0">
+    <span>made with</span>
+    <span class="hidden">☕ ☕</span>
+    ☕
+  </div>
 
   <span class="hidden px-2 text-gray-400 sm:inline-block">&bull;</span>
   <br class="block sm:hidden" />
@@ -53,10 +62,6 @@
   </span>
 </footer>
 
-<section class="h-screen">
-  <MainSection />
-</section>
-
 <div>
   {#if Object.keys(projects).length}
     <section class="mb-6 bg-gray-50">
@@ -66,3 +71,12 @@
     <ToTopButton />
   {/if}
 </div>
+
+<style>
+  .censorable-made-with-text:hover > span:first-of-type {
+    @apply hidden;
+  }
+  .censorable-made-with-text:hover > span:last-of-type {
+    @apply inline-block;
+  }
+</style>
