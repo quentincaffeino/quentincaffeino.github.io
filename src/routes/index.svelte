@@ -64,7 +64,7 @@
 
 <div>
   {#if Object.keys(projects).length}
-    <section class="mb-6 bg-gray-50">
+    <section id="projects" class="mb-6 bg-gray-50">
       <ProjectsSection {projects} />
     </section>
 
