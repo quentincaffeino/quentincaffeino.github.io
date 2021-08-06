@@ -46,8 +46,12 @@
       powered by 🔥
       <a
         class="border-b-[1px] border-[#ff3e00]"
-        href="https://github.com/sveltejs/kit">@sveltejs/kit</a
+        href="https://github.com/sveltejs/kit"
+        rel="noreferrer noopener"
+        target="_blank"
       >
+        @sveltejs/kit
+      </a>
     </span>
   </div>
 </section>
