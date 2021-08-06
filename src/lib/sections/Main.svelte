@@ -44,7 +44,7 @@
       rel="external"
       href="#projects"
       onclick="event.preventDefault();document.querySelector(this.getAttribute('href')).scrollIntoView()"
-      class="flex justify-center mt-6"
+      class="flex justify-center mt-6 fill-current text-theme"
     >
       <ChevronDownIcon size="2x" />
     </a>

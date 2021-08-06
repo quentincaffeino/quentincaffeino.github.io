@@ -4,6 +4,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        theme: "#ef8ebe",
+      },
+
       screens: {
         iphone5: { max: "320px" },
       },
