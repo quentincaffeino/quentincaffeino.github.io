@@ -8,7 +8,7 @@
       href="#"
       onclick="event.preventDefault();window.scrollTo(0,0);setTimeout(()=>document.activeElement.blur(),500);"
       rel="external"
-      class="block p-2 text-gray-600 bg-white border rounded-full shadow-xl fill-current animate__animated--bounce"
+      class="block p-2 bg-white border rounded-full shadow-xl fill-current text-theme animate__animated--bounce"
     >
       <ChevronUpIcon size="2x" />
     </a>
