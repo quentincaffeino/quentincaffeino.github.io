@@ -10,4 +10,12 @@
     @apply bg-gray-50;
     scroll-behavior: smooth;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    html,
+    body,
+    #svelte {
+      scroll-behavior: initial;
+    }
+  }
 }
