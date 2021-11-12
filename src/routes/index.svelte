@@ -1,17 +1,25 @@
 <script context="module">
-  import { fetchReposData } from "$lib/api/github";
+  import { fetchReposData, fetchUserData } from "$lib/api/github";
 
   export const prerender = true;
+
+  const ghUsername = import.meta.env.VITE_GH_USERNAME;
 
   /**
    * @type {import('@sveltejs/kit').Load}
    */
   export async function load({ page, fetch, session, context }) {
-    const projects =
-      (await fetchReposData({ fetch }).catch(console.error)) || {};
+    let userData = {};
+    let projects = {};
+
+    if (ghUsername) {
+      userData = (await fetchUserData({ fetch }).catch(console.error)) || {};
+      projects = (await fetchReposData({ fetch }).catch(console.error)) || {};
+    }
 
     return {
       props: {
+        userData,
         projects,
       },
     };
@@ -24,15 +32,17 @@
   import ToTopButton from "$lib/components/ToTopButton.svelte";
 
   // @hmr:keep
+  export let userData;
+  // @hmr:keep
   export let projects;
 </script>
 
 <svelte:head>
-  <title>quentincaffeino</title>
+  <title>{ghUsername}</title>
 </svelte:head>
 
 <section class="h-screen">
-  <MainSection />
+  <MainSection {userData} />
 </section>
 
 <!-- footer is below main because I need it to be above for censor hover to work,

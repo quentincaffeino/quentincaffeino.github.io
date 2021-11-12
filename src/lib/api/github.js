@@ -2,6 +2,7 @@ import { print } from "graphql";
 import { graphqlMinify, isResponseOk } from "./utils";
 import reposGraphql from "../graphql/github/repos.gql";
 
+const username = import.meta.env.VITE_GH_USERNAME;
 const token = import.meta.env.VITE_GH_OAUTH_TOKEN;
 
 /**
@@ -23,6 +24,17 @@ function prepareAuthorizedRequest(url, props = { authViaQuery: false }) {
   }
 
   return request;
+}
+
+/**
+ * @param {{fetch: Window.fetch}} props
+ * @returns {Promise<Object>}
+ */
+export function fetchUserData(props = { fetch: window.fetch }) {
+  return props
+    .fetch("https://api.github.com/users/" + username)
+    .then(isResponseOk)
+    .then((res) => res.json());
 }
 
 /**

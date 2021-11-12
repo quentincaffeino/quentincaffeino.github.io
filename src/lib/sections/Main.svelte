@@ -2,6 +2,10 @@
   import { svg as githubSvg } from "simple-icons/icons/github.js";
   import MailIcon from "svelte-feather-icons/src/icons/MailIcon.svelte";
   import ChevronDownIcon from "svelte-feather-icons/src/icons/ChevronDownIcon.svelte";
+
+  const ghUsername = import.meta.env.VITE_GH_USERNAME;
+
+  export let userData;
 </script>
 
 <div class="section-body">
@@ -11,7 +15,7 @@
     <div class="flex flex-col items-center h-full max-h-[50%] ">
       <div class="">
         <img
-          src="https://avatars.githubusercontent.com/u/2855777?v=4"
+          src={userData.avatar_url}
           alt="Sergei ZH"
           class="rounded-full max-h-52 max-w-52"
         />
@@ -20,22 +24,27 @@
       <div class="text-center">
         <h2 class="section-header section-header--1">
           <span class="text-3xl">Hi! I'm</span>
-          Sergei&nbsp;ZH<span class="text-3xl">,</span>
+          {@html userData.name.replace(" ", "&nbsp;")}<span class="text-3xl"
+            >,
+          </span>
         </h2>
+
         <h3 class="section-header section-header--2">
-          I'm a full-stack developer
+          and {userData.bio}
         </h3>
 
         <div class="flex flex-row flex-wrap justify-center px-3 space-x-4">
-          <div class="btn">
-            <a
-              href="https://github.com/quentincaffeino"
-              rel="noreferrer noopener"
-              target="_blank"
-            >
-              {@html githubSvg}
-            </a>
-          </div>
+          {#if ghUsername}
+            <div class="btn">
+              <a
+                href="https://github.com/{ghUsername}"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                {@html githubSvg}
+              </a>
+            </div>
+          {/if}
 
           <div class="">
             <a href="mailto:sergey95zu@gmail.com">
