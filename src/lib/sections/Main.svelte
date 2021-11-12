@@ -37,7 +37,7 @@
             <div class="btn">
               <a
                 href="https://github.com/{ghUsername}"
-                rel="noreferrer noopener"
+                rel="noreferrer noopener external"
                 target="_blank"
               >
                 <svg

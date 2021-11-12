@@ -12,7 +12,7 @@
   <a
     href={project.url}
     class="flex-grow"
-    rel="noreferrer noopener"
+    rel="noreferrer noopener external"
     target="_blank"
   >
     <div class="flex flex-col px-2 pt-1 mb-1 space-y-1">
