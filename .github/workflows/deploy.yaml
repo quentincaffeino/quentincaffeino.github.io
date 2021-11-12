@@ -22,9 +22,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          mkdir ~/.npm-global
-          NPM_CONFIG_PREFIX=~/.npm-global npm install -g pnpm
-          export PATH=~/.npm-global/bin:$PATH
+          curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
           pnpm install
           export VITE_GH_USERNAME=${{ env.GITHUB_ACTOR }}
           export VITE_GH_OAUTH_TOKEN=${{ secrets.VITE_GH_OAUTH_TOKEN }}
