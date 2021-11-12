@@ -1,5 +1,5 @@
 <script context="module">
-  import { fetchGithubData } from "$lib/api/github";
+  import { fetchReposData } from "$lib/api/github";
 
   export const prerender = true;
 
@@ -8,7 +8,7 @@
    */
   export async function load({ page, fetch, session, context }) {
     const projects =
-      (await fetchGithubData({ fetch }).catch(console.error)) || {};
+      (await fetchReposData({ fetch }).catch(console.error)) || {};
 
     return {
       props: {

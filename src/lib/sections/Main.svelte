@@ -1,6 +1,7 @@
 <script>
-  import Github from "simple-icons/icons/github.js";
-  import { MailIcon, ChevronDownIcon } from "svelte-feather-icons";
+  import { svg as githubSvg } from "simple-icons/icons/github.js";
+  import MailIcon from "svelte-feather-icons/src/icons/MailIcon.svelte";
+  import ChevronDownIcon from "svelte-feather-icons/src/icons/ChevronDownIcon.svelte";
 </script>
 
 <div class="section-body">
@@ -32,7 +33,7 @@
               rel="noreferrer noopener"
               target="_blank"
             >
-              {@html Github.svg}
+              {@html githubSvg}
             </a>
           </div>
 

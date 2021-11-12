@@ -1,6 +1,6 @@
 import { print } from "graphql";
 import { graphqlMinify, isResponseOk } from "./utils";
-import githubGraphql from "../graphql/github-repos.gql";
+import reposGraphql from "../graphql/github/repos.gql";
 
 const token = import.meta.env.VITE_GH_OAUTH_TOKEN;
 
@@ -29,7 +29,7 @@ function prepareAuthorizedRequest(url, props = { authViaQuery: false }) {
  * @param {{fetch: Window.fetch}} props
  * @returns {Promise<>}
  */
-export function fetchGithubData(props = { fetch: window.fetch }) {
+export function fetchReposData(props = { fetch: window.fetch }) {
   return props
     .fetch(
       prepareAuthorizedRequest("https://api.github.com/graphql", {
@@ -38,7 +38,7 @@ export function fetchGithubData(props = { fetch: window.fetch }) {
       {
         method: "POST",
         body: JSON.stringify({
-          query: graphqlMinify(print(githubGraphql)),
+          query: graphqlMinify(print(reposGraphql)),
         }),
       }
     )
