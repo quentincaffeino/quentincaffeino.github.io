@@ -25,7 +25,9 @@
       </a>
 
       {#if project.isArchived}
-        <ArchiveIcon size="1x" class="ml-4 opacity-50" title="Archived" />
+        <span title="Archived">
+          <ArchiveIcon size="1x" class="ml-4 opacity-50" />
+        </span>
       {/if}
     </div>
 
