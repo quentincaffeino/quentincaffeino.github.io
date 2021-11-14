@@ -16,9 +16,10 @@ jobs:
         uses: actions/cache@v2
         with:
           path: |
-            node_modules
+            ~/.pnpm-store
             .svelte-kit
-          key: ${{ runner.os }}-${{ github.sha }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-node-
 
       - name: Install and Build 🔧
         run: |
