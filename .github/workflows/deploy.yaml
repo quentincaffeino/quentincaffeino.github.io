@@ -26,6 +26,7 @@ jobs:
           curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
           pnpm install
           export VITE_GH_USERNAME=${{ env.GITHUB_ACTOR }}
+          printenv
           export VITE_GH_OAUTH_TOKEN=${{ secrets.VITE_GH_OAUTH_TOKEN }}
           pnpm build
           find ./build -name "*.js" | xargs rm
