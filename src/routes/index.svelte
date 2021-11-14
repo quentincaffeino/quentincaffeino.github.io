@@ -4,7 +4,6 @@
   export const prerender = true;
 
   const ghUsername = import.meta.env.VITE_GH_USERNAME;
-  console.log(ghUsername)
 
   /**
    * @type {import('@sveltejs/kit').Load}
