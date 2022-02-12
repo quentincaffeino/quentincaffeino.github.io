@@ -5,24 +5,22 @@ const dev = process.env.NODE_ENV === "development";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-  kit: Object.assign(
-    {
-      browser: {
-        hydrate: dev,
-        router: dev,
-      },
+  kit: {
+    inlineStyleThreshold: 1024 * 4,
 
-      vite: () => ({
-        plugins: [graphql()],
-      }),
+    adapter: adapter({
+      // precompress: true,
+    }),
+
+    browser: {
+      hydrate: dev,
+      router: dev,
     },
 
-    !dev
-      ? {
-          adapter: adapter(),
-        }
-      : {}
-  ),
+    vite: () => ({
+      plugins: [graphql()],
+    }),
+  },
 };
 
 export default config;

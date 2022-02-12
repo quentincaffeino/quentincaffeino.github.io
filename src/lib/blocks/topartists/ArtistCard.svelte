@@ -51,7 +51,13 @@
 
 <div class="">
   <Card>
-    <img class="aspect-square" alt={artist.name} {src} {srcset} />
+    <img
+      class="aspect-square"
+      loading="lazy"
+      alt={artist.name}
+      {srcset}
+      {src}
+    />
   </Card>
 
   <div class="px-2 py-1 font-semibold">

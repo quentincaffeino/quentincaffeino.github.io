@@ -2,7 +2,7 @@
   import hexToLuma from "$lib/utils/hexToLuma";
 
   export let language;
-  let className;
+  let className = "";
   export { className as class };
 
   let lightness = 0;
@@ -10,16 +10,15 @@
 </script>
 
 <span
-  class="rounded-full px-2 py-[0.0625rem] text-xs {className} {lightness > 150
-    ? 'text-black'
-    : 'text-white'}"
+  class="{className} {lightness > 150 ? 'text-black' : 'text-white'}"
   style="--color:{language.color ?? 'black'}"
 >
   {language.name?.trim()}
 </span>
 
-<style>
+<style lang="postcss">
   span {
-    background-color: var(--color);
+    @apply rounded-full px-2 py-[0.0625rem] text-xs;
+    background-color: var(--color, black);
   }
 </style>
