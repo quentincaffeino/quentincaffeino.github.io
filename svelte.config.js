@@ -1,8 +1,6 @@
 import adapter from "@sveltejs/adapter-static";
 import graphql from "@rollup/plugin-graphql";
 
-console.log(process.env);
-
 const dev = process.env.NODE_ENV === "development";
 
 /** @type {import('@sveltejs/kit').Config} */

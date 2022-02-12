@@ -7,8 +7,6 @@ export const component = TopArtists;
 
 export const name = "topartists";
 
-console.log(import.meta.env);
-
 const URL_BASE = "https://ws.audioscrobbler.com/2.0";
 const urlSearchParams = new URLSearchParams({
   method: "user.gettopartists",
