@@ -1,5 +1,5 @@
 <script>
-  import { hexToLuma } from "$lib/utils";
+  import hexToLuma from "$lib/utils/hexToLuma";
 
   export let language;
   let className;
@@ -15,7 +15,7 @@
     : 'text-white'}"
   style="--color:{language.color ?? 'black'}"
 >
-  {language.name.trim()}
+  {language.name?.trim()}
 </span>
 
 <style>

@@ -1,7 +1,9 @@
 <script context="module">
-  import { fetchReposData, fetchUserData } from "$lib/api/github";
+  import { fetchUserData } from "$lib/api/github";
 
   export const prerender = true;
+
+  const BLOCKS = ["../lib/blocks/projects", "../lib/blocks/topartists"];
 
   const ghUsername = import.meta.env.VITE_GH_USERNAME;
 
@@ -10,17 +12,32 @@
    */
   export async function load({ page, fetch, session, context }) {
     let userData = {};
-    let projects = {};
 
     if (ghUsername) {
       userData = (await fetchUserData({ fetch }).catch(console.error)) || {};
-      projects = (await fetchReposData({ fetch }).catch(console.error)) || {};
+    }
+
+    const blocks = [];
+
+    for (const block of BLOCKS) {
+      const { name, component, load } = await import(
+        "./" + block + "/index.js"
+      );
+
+      const data = await load({ fetch });
+      console.log(data)
+
+      blocks.push({
+        name,
+        component,
+        data,
+      });
     }
 
     return {
       props: {
         userData,
-        projects,
+        blocks,
       },
     };
   }
@@ -28,13 +45,12 @@
 
 <script>
   import MainSection from "$lib/sections/Main.svelte";
-  import ProjectsSection from "$lib/sections/Projects.svelte";
   import ToTopButton from "$lib/components/ToTopButton.svelte";
 
   // @hmr:keep
   export let userData;
   // @hmr:keep
-  export let projects;
+  export let blocks;
 </script>
 
 <svelte:head>
@@ -73,13 +89,13 @@
 </footer>
 
 <div>
-  {#if Object.keys(projects).length}
-    <section id="projects" class="mb-6 bg-gray-50">
-      <ProjectsSection {projects} />
+  {#each blocks as block}
+    <section id={block.name} class="mb-6 bg-gray-50">
+      <svelte:component this={block.component} {...block.data} />
     </section>
+  {/each}
 
-    <ToTopButton />
-  {/if}
+  <ToTopButton />
 </div>
 
 <style>

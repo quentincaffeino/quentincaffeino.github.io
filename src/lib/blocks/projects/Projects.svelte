@@ -13,20 +13,20 @@
 </script>
 
 <script>
-  import ProjectList from "$lib/components/Project/ProjectList.svelte";
+  import ProjectList from "./ProjectList.svelte";
 
   /** @type {Object} */
-  export let projects;
+  export let data;
 
   let personalProjects;
   $: personalProjects =
-    projects?.data?.viewer?.repositories?.nodes
+    data?.viewer?.repositories?.nodes
       ?.filter(filterOutForks)
       ?.sort(sortByStars)
       ?.sort(sortArchivedToEnd) || [];
 
   let contributionProjects =
-    projects?.data?.viewer?.repositoriesContributedTo?.nodes || [];
+    data?.viewer?.repositoriesContributedTo?.nodes || [];
 </script>
 
 <h2 class="sticky top-0 z-10 bg-gray-50 section-header section-header--1">

@@ -1,14 +1,13 @@
 <script>
   import StarIcon from "svelte-feather-icons/src/icons/StarIcon.svelte";
   import ArchiveIcon from "svelte-feather-icons/src/icons/ArchiveIcon.svelte";
+  import Card from "$lib/components/Card.svelte";
   import LanguagePill from "./LanguagePill.svelte";
 
   export let project;
 </script>
 
-<article
-  class="flex flex-col p-1 overflow-hidden bg-white border shadow-sm rounded-xl"
->
+<Card class="p-1">
   <a
     href={project.url}
     class="flex-grow"
@@ -61,4 +60,4 @@
       {/if}
     </div>
   {/if}
-</article>
+</Card>

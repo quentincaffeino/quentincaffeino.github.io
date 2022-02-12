@@ -23,7 +23,7 @@
       <div class="text-center">
         <h2 class="section-header section-header--1">
           <span class="text-3xl">Hi! I'm</span>
-          {@html userData.name.replace(" ", "&nbsp;")}<span class="text-3xl"
+          {@html userData.name?.replace(" ", "&nbsp;")}<span class="text-3xl"
             >,
           </span>
         </h2>
