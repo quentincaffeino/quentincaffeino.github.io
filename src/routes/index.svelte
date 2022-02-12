@@ -3,14 +3,14 @@
 
   export const prerender = true;
 
-  const BLOCKS = ["../lib/blocks/projects", "../lib/blocks/topartists"];
+  const BLOCKS = ["projects", "topartists"];
 
   const ghUsername = import.meta.env.VITE_GH_USERNAME;
 
   /**
    * @type {import('@sveltejs/kit').Load}
    */
-  export async function load({ page, fetch, session, context }) {
+  export async function load({ fetch }) {
     let userData = {};
 
     if (ghUsername) {
@@ -21,11 +21,10 @@
 
     for (const block of BLOCKS) {
       const { name, component, load } = await import(
-        "./" + block + "/index.js"
+        "./../lib/blocks/" + block + "/index.js"
       );
 
       const data = await load({ fetch });
-      console.log(data)
 
       blocks.push({
         name,

@@ -29,7 +29,6 @@
   import Card from "$lib/components/Card.svelte";
 
   export let artist;
-  console.log(artist)
 
   let images = [];
   $: images =

@@ -7,15 +7,16 @@ const dev = process.env.NODE_ENV === "development";
 const config = {
   kit: Object.assign(
     {
-      target: "#svelte",
-
-      hydrate: dev,
-      router: dev,
+      browser: {
+        hydrate: dev,
+        router: dev,
+      },
 
       vite: () => ({
         plugins: [graphql()],
       }),
     },
+
     !dev
       ? {
           adapter: adapter(),
