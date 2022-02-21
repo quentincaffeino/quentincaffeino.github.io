@@ -97,7 +97,7 @@
   <ToTopButton />
 </div>
 
-<style>
+<style lang="postcss">
   .censorable-made-with-text:hover > span:first-of-type {
     @apply hidden;
   }
