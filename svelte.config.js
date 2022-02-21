@@ -13,8 +13,8 @@ const config = {
     }),
 
     browser: {
-      hydrate: dev,
-      router: dev,
+      hydrate: false,
+      router: false,
     },
 
     vite: () => ({
