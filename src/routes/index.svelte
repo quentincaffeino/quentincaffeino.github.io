@@ -1,9 +1,8 @@
 <script context="module">
   import { fetchUserData } from "$lib/api/github";
+  import Blocks, { blocksMap } from "$lib/blocks/index.svelte";
 
   export const prerender = true;
-
-  const BLOCKS = ["projects", "topartists"];
 
   const ghUsername = import.meta.env.VITE_GH_USERNAME;
 
@@ -17,16 +16,12 @@
       userData = (await fetchUserData({ fetch }).catch(console.error)) || {};
     }
 
-    const blocks = [];
+    const readyBlocks = [];
 
-    for (const block of BLOCKS) {
-      const { name, component, load } = await import(
-        "./../lib/blocks/" + block + "/index.js"
-      );
-
+    for (const [name, { load, component }] of blocksMap.entries()) {
       const data = await load({ fetch });
 
-      blocks.push({
+      readyBlocks.push({
         name,
         component,
         data,
@@ -36,7 +31,7 @@
     return {
       props: {
         userData,
-        blocks,
+        blocks: readyBlocks,
       },
     };
   }
@@ -90,7 +85,7 @@
 <div>
   {#each blocks as block}
     <section id={block.name} class="mb-6 bg-gray-50">
-      <svelte:component this={block.component} {...block.data} />
+      <Blocks name={block.name} props={block.data} />
     </section>
   {/each}
 
