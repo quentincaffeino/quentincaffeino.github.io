@@ -53,8 +53,6 @@
       )
       .filter(filterOutPrivate)
       .filter(filterOutPersonal) || [];
-
-  console.log(contributionProjects);
 </script>
 
 <h2 class="sticky top-0 z-10 bg-gray-50 section-header section-header--1">
