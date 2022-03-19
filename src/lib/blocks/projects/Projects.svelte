@@ -11,9 +11,19 @@
   const filterOutForks = (project) =>
     filterOutForksExceptions.indexOf(project.name) !== -1 || !project.isFork;
 
-  const filterUniqueByName = (comparator) => {
+  const filterUniqueByKey = (getKey) => {
     const set = new Set();
-    return comparator.bind(undefined, set);
+
+    return (el) => {
+      const key = getKey(el);
+
+      if (set.has(key)) {
+        return false;
+      }
+
+      set.add(key);
+      return true;
+    };
   };
 
   const filterOutPrivate = (project) => !project.isPrivate;
@@ -41,16 +51,7 @@
         []
       )
       .map((r) => r.repository)
-      .filter(
-        filterUniqueByName((set, project) => {
-          if (set.has(project.name)) {
-            return false;
-          } else {
-            set.add(project.name);
-            return true;
-          }
-        })
-      )
+      .filter(filterUniqueByKey((project) => project.name))
       .filter(filterOutPrivate)
       .filter(filterOutPersonal) || [];
 </script>
