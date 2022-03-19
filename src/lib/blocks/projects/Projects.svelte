@@ -18,8 +18,7 @@
   /** @type {Object} */
   export let data;
 
-  let personalProjects;
-  $: personalProjects =
+  let personalProjects =
     data?.viewer?.repositories?.nodes
       ?.filter(filterOutForks)
       ?.sort(sortByStars)
