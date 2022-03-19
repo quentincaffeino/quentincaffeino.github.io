@@ -1,5 +1,6 @@
 import adapter from "@sveltejs/adapter-static";
 import graphql from "@rollup/plugin-graphql";
+import dot from "rollup-plugin-dot";
 
 const dev = process.env.NODE_ENV === "development";
 
@@ -18,7 +19,13 @@ const config = {
     },
 
     vite: () => ({
-      plugins: [graphql()],
+      plugins: [
+        graphql(),
+        dot({
+          include: ["src/**/*.tpl"],
+          templateSettings: { strip: false },
+        }),
+      ],
     }),
   },
 };

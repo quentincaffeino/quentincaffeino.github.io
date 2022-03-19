@@ -10,6 +10,16 @@
   ];
   const filterOutForks = (project) =>
     filterOutForksExceptions.indexOf(project.name) !== -1 || !project.isFork;
+
+  const filterUniqueByName = (comparator) => {
+    const set = new Set();
+    return comparator.bind(undefined, set);
+  };
+
+  const filterOutPrivate = (project) => !project.isPrivate;
+
+  const filterOutPersonal = (project) =>
+    project?.owner?.login !== import.meta.env.VITE_GH_USERNAME;
 </script>
 
 <script>
@@ -25,7 +35,26 @@
       ?.sort(sortArchivedToEnd) || [];
 
   let contributionProjects =
-    data?.viewer?.repositoriesContributedTo?.nodes || [];
+    Object.values(data?.user || {})
+      .reduce(
+        (pv, cv) => [...pv, ...cv.pullRequestContributionsByRepository],
+        []
+      )
+      .map((r) => r.repository)
+      .filter(
+        filterUniqueByName((set, project) => {
+          if (set.has(project.name)) {
+            return false;
+          } else {
+            set.add(project.name);
+            return true;
+          }
+        })
+      )
+      .filter(filterOutPrivate)
+      .filter(filterOutPersonal) || [];
+
+  console.log(contributionProjects);
 </script>
 
 <h2 class="sticky top-0 z-10 bg-gray-50 section-header section-header--1">
