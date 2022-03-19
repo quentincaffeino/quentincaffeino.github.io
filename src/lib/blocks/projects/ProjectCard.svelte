@@ -37,7 +37,7 @@
 
       <!-- Languages -->
       {#if project?.languages?.nodes?.length}
-        <div class="flex flex-row flex-wrap -mb-1">
+        <div class="flex flex-row flex-wrap -mb-1 pt-1">
           {#each project.languages.nodes as language}
             <LanguagePill {language} class="mb-1 mr-1" />
           {/each}
