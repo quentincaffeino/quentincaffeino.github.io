@@ -5,25 +5,32 @@ on:
     branches:
       - main
   schedule:
+    # run once a week
     - cron: "0 0 * * 0"
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - 
+        name: Checkout 🛎️
         uses: actions/checkout@v2
-
-      - name: Cache multiple paths
-        uses: actions/cache@v2
+      - 
+        name: Setup pnpm ⚙️
+        uses: pnpm/action-setup@v2
         with:
-          path: |
-            ~/.pnpm-store
-            .svelte-kit
-          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: ${{ runner.os }}-node-
-
-      - name: Install and Build 🔧
+          version: 7
+      - 
+        name: Setup node ⚙️
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'pnpm'
+      - 
+        name: Install deps ☁️
+        run: pnpm install
+      - 
+        name: Build the project 🛠️
         env:
           VITE_GH_USERNAME: ${{ github.actor }}
           VITE_GH_OAUTH_TOKEN: ${{ secrets.VITE_GH_OAUTH_TOKEN }}
@@ -31,13 +38,13 @@ jobs:
           VITE_LASTFM_API_KEY: ${{ secrets.VITE_LASTFM_API_KEY }}
           VITE_SPOTIFY_CLIENT_ID: ${{ secrets.VITE_SPOTIFY_CLIENT_ID }}
           VITE_SPOTIDY_CLIENT_SECRET: ${{ secrets.VITE_SPOTIDY_CLIENT_SECRET }}
+        run: pnpm build
+      - 
+        name: Cleanup 🧹
         run: |
-          curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
-          pnpm install
-          pnpm build
           find ./build -name "*.js" | xargs rm
-
-      - name: Deploy 🚀
+      - 
+        name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
           branch: gh-pages
