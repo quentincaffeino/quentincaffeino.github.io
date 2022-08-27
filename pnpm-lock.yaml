@@ -1,22 +1,22 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@rollup/plugin-graphql': ^1.1.0
-  '@sveltejs/adapter-static': ^1.0.0-next.39
+  '@rollup/plugin-graphql': 1.1.0
+  '@sveltejs/adapter-static': 1.0.0-next.39
   '@sveltejs/kit': 1.0.0-next.401
-  autoprefixer: ^10.4.8
-  graphql: ^16.6.0
-  html-minifier-terser: ^7.0.0
-  postcss: ^8.4.16
-  rollup: ^2.78.1
-  rollup-plugin-dot: ^1.1.0
+  autoprefixer: 10.4.8
+  graphql: 16.6.0
+  html-minifier-terser: 7.0.0
+  postcss: 8.4.16
+  rollup: 2.78.1
+  rollup-plugin-dot: 1.1.0
   sirv-cli: 2.0.2
-  spotify-web-api-node: ^5.0.2
-  svelte: ^3.49.0
-  svelte-feather-icons: ^4.0.0
-  tailwindcss: ^3.1.8
-  tailwindcss-textshadow: ^2.1.3
-  vite: ^3.0.9
+  spotify-web-api-node: 5.0.2
+  svelte: 3.49.0
+  svelte-feather-icons: 4.0.0
+  tailwindcss: 3.1.8
+  tailwindcss-textshadow: 2.1.3
+  vite: 3.0.9
 
 devDependencies:
   '@rollup/plugin-graphql': 1.1.0_e3surzgx2htijcek7krluiwls4
@@ -436,7 +436,7 @@ packages:
     dev: true
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
   /console-clear/1.1.1:
