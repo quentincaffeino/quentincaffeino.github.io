@@ -31,11 +31,11 @@ export async function load({ fetch }) {
       console.error("Something went wrong when retrieving an access token", err)
     );
 
-  const lastfm = await fetch(URL)
+  const data = await fetch(URL)
     .then(isResponseOk)
     .then(parseJsonResponseBody);
 
-  for (const artist of lastfm.topartists.artist) {
+  for (const artist of data.topartists.artist) {
     const spArtist = await spotifyApi
       .searchArtists(artist.name, { limit: 1 })
       .then((data) => data.body.artists.items[0])
@@ -46,7 +46,7 @@ export async function load({ fetch }) {
     artist.spotify.images = spArtist?.images;
   }
 
-  return lastfm;
+  return data;
 }
 
 export default TopArtists;
