@@ -15,7 +15,7 @@
     "graphql": "16.6.0",
     "html-minifier-terser": "7.0.0",
     "postcss": "8.4.16",
-    "rollup": "2.78.1",
+    "rollup": "2.79.0",
     "rollup-plugin-dot": "1.1.0",
     "sirv-cli": "2.0.2",
     "spotify-web-api-node": "5.0.2",
