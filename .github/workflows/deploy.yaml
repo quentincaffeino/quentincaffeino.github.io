@@ -33,7 +33,7 @@ jobs:
         name: Build the project 🛠️
         env:
           VITE_GH_USERNAME: ${{ github.actor }}
-          VITE_GH_OAUTH_TOKEN: ${{ github.token }}
+          VITE_GH_OAUTH_TOKEN: ${{ secrets.VITE_GH_OAUTH_TOKEN }}
           VITE_LASTFM_USER: ${{ secrets.VITE_LASTFM_USER }}
           VITE_LASTFM_API_KEY: ${{ secrets.VITE_LASTFM_API_KEY }}
           VITE_SPOTIFY_CLIENT_ID: ${{ secrets.VITE_SPOTIFY_CLIENT_ID }}
