@@ -38,13 +38,14 @@
   /** @type {Object} */
   export let data;
 
-  let personalProjects =
+  const personalProjects =
     data?.viewer?.repositories?.nodes
       ?.filter(filterOutForks)
+      ?.filter(project => project.name !== 'Kingdom') // This is Gosha's project
       ?.sort(sortByStars)
       ?.sort(sortArchivedToEnd) || [];
 
-  let contributionProjects =
+  const contributionProjects =
     Object.values(data?.user || {})
       .reduce(
         (pv, cv) => [...pv, ...cv.pullRequestContributionsByRepository],

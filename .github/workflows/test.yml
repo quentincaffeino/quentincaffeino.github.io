@@ -1,15 +1,12 @@
-name: Build and Deploy
+name: Test
 
 on:
-  push:
-    branches:
-      - main
-  schedule:
-    # run once a week
-    - cron: "0 0 * * 0"
+  pull_request:
+    branches: [main, master]
 
 jobs:
-  build-and-deploy:
+  test:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - 
@@ -29,6 +26,19 @@ jobs:
       - 
         name: Install deps ☁️
         run: pnpm install
+      -
+        name: Install Playwright Browsers
+        run: pnpm playwright install --with-deps
+      -
+        name: Run tests
+        env:
+          VITE_GH_USERNAME: ${{ github.actor }}
+          VITE_GH_OAUTH_TOKEN: ${{ github.token }}
+          VITE_LASTFM_USER: ${{ secrets.VITE_LASTFM_USER }}
+          VITE_LASTFM_API_KEY: ${{ secrets.VITE_LASTFM_API_KEY }}
+          VITE_SPOTIFY_CLIENT_ID: ${{ secrets.VITE_SPOTIFY_CLIENT_ID }}
+          VITE_SPOTIDY_CLIENT_SECRET: ${{ secrets.VITE_SPOTIDY_CLIENT_SECRET }}
+        run: pnpm ci:test
       - 
         name: Build the project 🛠️
         env:
@@ -38,14 +48,11 @@ jobs:
           VITE_LASTFM_API_KEY: ${{ secrets.VITE_LASTFM_API_KEY }}
           VITE_SPOTIFY_CLIENT_ID: ${{ secrets.VITE_SPOTIFY_CLIENT_ID }}
           VITE_SPOTIDY_CLIENT_SECRET: ${{ secrets.VITE_SPOTIDY_CLIENT_SECRET }}
-        run: pnpm build
-      - 
-        name: Cleanup 🧹
-        run: |
-          find ./build -name "*.js" | xargs rm
-      - 
-        name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.4.0
+        run: pnpm ci:build
+      -
+        uses: actions/upload-artifact@v2
+        if: always()
         with:
-          branch: gh-pages
-          folder: build
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 14

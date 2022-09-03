@@ -1,4 +1,4 @@
-import graphqlMinify from "$lib/utils/graphqlMinify";
+import minifyGraphQLString from "$lib/utils/minifyGraphQLString";
 import isResponseOk from "$lib/utils/isResponseOk";
 import prepareAuthorizedRequest from "$lib/utils/prepareAuthorizedGithubRequest";
 import parseJsonResponseBody from "$lib/utils/parseJsonResponseBody";
@@ -11,13 +11,11 @@ export const name = "projects";
 
 export async function load({ fetch }) {
   return fetch(
-    prepareAuthorizedRequest("https://api.github.com/graphql", {
-      token: import.meta.env.VITE_GH_OAUTH_TOKEN,
-    }),
+    prepareAuthorizedRequest("/graphql", import.meta.env.VITE_GH_OAUTH_TOKEN),
     {
       method: "POST",
       body: JSON.stringify({
-        query: graphqlMinify(
+        query: minifyGraphQLString(
           reposGraphql({
             username: import.meta.env.VITE_GH_USERNAME,
             currentYear: new Date().getFullYear(),

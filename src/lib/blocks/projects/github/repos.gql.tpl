@@ -1,4 +1,5 @@
 {
+  # Fetch user's public repositories
   viewer {
     repositories(
       first: 100
@@ -22,8 +23,10 @@
     }
   }
 
+  # Fetch repositories that user has contributed to
   user(login: "{{= it.username }}") {
 
+    # Since github only allows to get updates on timespan of one year, generate query for all years user has been registered
     {{ for(let year = it.currentYear + 1; year > it.endAtYear; --year) { }}
 
       contributionsCollection{{= year - 1 }}: contributionsCollection(

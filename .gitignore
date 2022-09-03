@@ -213,3 +213,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,osx,windows,visualstudiocode,node
+
+/test-results/
+/playwright-report/
+/playwright/.cache/
