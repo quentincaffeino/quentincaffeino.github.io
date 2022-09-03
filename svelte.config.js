@@ -6,6 +6,7 @@ const config = {
     inlineStyleThreshold: 1024 * 4,
 
     adapter: adapter({
+      fallback: "200.html",
       // precompress: true,
     }),
 
