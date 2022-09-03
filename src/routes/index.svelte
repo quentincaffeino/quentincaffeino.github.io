@@ -2,8 +2,6 @@
   import { fetchUserData } from "$lib/api/github";
   import Blocks, { blocksMap } from "$lib/blocks/index.svelte";
 
-  export const prerender = true;
-
   const ghUsername = import.meta.env.VITE_GH_USERNAME;
 
   /**
