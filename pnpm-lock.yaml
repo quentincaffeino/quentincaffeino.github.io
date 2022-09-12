@@ -7,7 +7,7 @@ specifiers:
   '@sveltejs/adapter-static': 1.0.0-next.42
   '@sveltejs/kit': 1.0.0-next.401
   '@vitest/coverage-istanbul': 0.23.2
-  autoprefixer: 10.4.8
+  autoprefixer: 10.4.9
   dotenv: 16.0.2
   graphql: 16.6.0
   happy-dom: 6.0.4
@@ -34,7 +34,7 @@ devDependencies:
   '@sveltejs/adapter-static': 1.0.0-next.42
   '@sveltejs/kit': 1.0.0-next.401_svelte@3.50.1+vite@3.1.0
   '@vitest/coverage-istanbul': 0.23.2_happy-dom@6.0.4
-  autoprefixer: 10.4.8_postcss@8.4.16
+  autoprefixer: 10.4.9_postcss@8.4.16
   dotenv: 16.0.2
   graphql: 16.6.0
   happy-dom: 6.0.4
@@ -568,15 +568,15 @@ packages:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
     dev: true
 
-  /autoprefixer/10.4.8_postcss@8.4.16:
-    resolution: {integrity: sha512-75Jr6Q/XpTqEf6D2ltS5uMewJIx5irCU1oBYJrWjFenq/m12WRRrz6g15L1EIoYvPLXTbEry7rDOwrcYNj77xw==}
+  /autoprefixer/10.4.9_postcss@8.4.16:
+    resolution: {integrity: sha512-Uu67eduPEmOeA0vyJby5ghu1AAELCCNSsLAjK+lz6kYzNM5sqnBO36MqfsjhPjQF/BaJM5U/UuFYyl7PavY/wQ==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.3
-      caniuse-lite: 1.0.30001383
+      caniuse-lite: 1.0.30001396
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -589,7 +589,7 @@ packages:
     hasBin: true
     dependencies:
       browserslist: 4.21.3
-      caniuse-lite: 1.0.30001383
+      caniuse-lite: 1.0.30001396
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       picocolors: 0.2.1
@@ -625,7 +625,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001383
+      caniuse-lite: 1.0.30001396
       electron-to-chromium: 1.4.233
       node-releases: 2.0.6
       update-browserslist-db: 1.0.5_browserslist@4.21.3
@@ -659,8 +659,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /caniuse-lite/1.0.30001383:
-    resolution: {integrity: sha512-swMpEoTp5vDoGBZsYZX7L7nXHe6dsHxi9o6/LKf/f0LukVtnrxly5GVb/fWdCDTqi/yw6Km6tiJ0pmBacm0gbg==}
+  /caniuse-lite/1.0.30001396:
+    resolution: {integrity: sha512-Df93cp39XVZRoOl2EoiuNp2rc4Dnsb9mDQEs4qFa7/uTx3FnfEq+jyHLf/0Ik7GVJA6wvJuAI5ZKUtUEenAm9Q==}
     dev: true
 
   /caseless/0.12.0:
