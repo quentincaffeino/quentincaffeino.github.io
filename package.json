@@ -21,7 +21,7 @@
     "@rollup/plugin-graphql": "1.1.0",
     "@sveltejs/adapter-static": "1.0.0-next.43",
     "@sveltejs/kit": "1.0.0-next.401",
-    "@vitest/coverage-istanbul": "0.23.2",
+    "@vitest/coverage-istanbul": "0.23.4",
     "autoprefixer": "10.4.11",
     "dotenv": "16.0.2",
     "graphql": "16.6.0",
