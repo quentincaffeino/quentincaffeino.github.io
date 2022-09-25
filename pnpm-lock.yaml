@@ -7,7 +7,7 @@ specifiers:
   '@sveltejs/adapter-static': 1.0.0-next.43
   '@sveltejs/kit': 1.0.0-next.401
   '@vitest/coverage-istanbul': 0.23.4
-  autoprefixer: 10.4.11
+  autoprefixer: 10.4.12
   dotenv: 16.0.2
   graphql: 16.6.0
   happy-dom: 6.0.4
@@ -34,7 +34,7 @@ devDependencies:
   '@sveltejs/adapter-static': 1.0.0-next.43
   '@sveltejs/kit': 1.0.0-next.401_svelte@3.50.1+vite@3.1.2
   '@vitest/coverage-istanbul': 0.23.4_happy-dom@6.0.4
-  autoprefixer: 10.4.11_postcss@8.4.16
+  autoprefixer: 10.4.12_postcss@8.4.16
   dotenv: 16.0.2
   graphql: 16.6.0
   happy-dom: 6.0.4
@@ -577,8 +577,8 @@ packages:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
     dev: true
 
-  /autoprefixer/10.4.11_postcss@8.4.16:
-    resolution: {integrity: sha512-5lHp6DgRodxlBLSkzHOTcufWFflH1ewfy2hvFQyjrblBFlP/0Yh4O/Wrg4ow8WRlN3AAUFFLAQwX8hTptzqVHg==}
+  /autoprefixer/10.4.12_postcss@8.4.16:
+    resolution: {integrity: sha512-WrCGV9/b97Pa+jtwf5UGaRjgQIg7OK3D06GnoYoZNcG1Xb8Gt3EfuKjlhh9i/VtT16g6PYjZ69jdJ2g8FxSC4Q==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
