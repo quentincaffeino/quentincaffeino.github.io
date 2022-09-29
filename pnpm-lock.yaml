@@ -8,7 +8,7 @@ specifiers:
   '@sveltejs/kit': 1.0.0-next.401
   '@vitest/coverage-istanbul': 0.23.4
   autoprefixer: 10.4.12
-  dotenv: 16.0.2
+  dotenv: 16.0.3
   graphql: 16.6.0
   happy-dom: 6.0.4
   html-minifier-terser: 7.0.0
@@ -35,7 +35,7 @@ devDependencies:
   '@sveltejs/kit': 1.0.0-next.401_svelte@3.50.1+vite@3.1.4
   '@vitest/coverage-istanbul': 0.23.4_happy-dom@6.0.4
   autoprefixer: 10.4.12_postcss@8.4.16
-  dotenv: 16.0.2
+  dotenv: 16.0.3
   graphql: 16.6.0
   happy-dom: 6.0.4
   html-minifier-terser: 7.0.0
@@ -922,8 +922,8 @@ packages:
     hasBin: true
     dev: true
 
-  /dotenv/16.0.2:
-    resolution: {integrity: sha512-JvpYKUmzQhYoIFgK2MOnF3bciIZoItIIoryihy0rIA+H4Jy0FmgyKYAHCTN98P5ybGSJcIFbh6QKeJdtZd1qhA==}
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
     engines: {node: '>=12'}
     dev: true
 
