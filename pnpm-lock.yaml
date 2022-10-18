@@ -16,7 +16,7 @@ specifiers:
   npm-run-all: 4.1.5
   playwright: 1.27.1
   postcss: 8.4.18
-  rollup: 2.79.1
+  rollup: 3.2.3
   rollup-plugin-dot: 1.1.0
   sirv-cli: 2.0.2
   spotify-web-api-node: 5.0.2
@@ -30,7 +30,7 @@ specifiers:
 devDependencies:
   '@playwright/experimental-ct-svelte': 1.27.1_svelte@3.52.0
   '@playwright/test': 1.27.1
-  '@rollup/plugin-graphql': 1.1.0_wvgxa4tpgmyetagc7e4kukhube
+  '@rollup/plugin-graphql': 1.1.0_65bm22uixl7h2qfprv2welfmfm
   '@sveltejs/adapter-static': 1.0.0-next.44
   '@sveltejs/kit': 1.0.0-next.401_svelte@3.52.0+vite@3.1.8
   '@vitest/coverage-istanbul': 0.24.3_happy-dom@7.5.12
@@ -43,7 +43,7 @@ devDependencies:
   npm-run-all: 4.1.5
   playwright: 1.27.1
   postcss: 8.4.18
-  rollup: 2.79.1
+  rollup: 3.2.3
   rollup-plugin-dot: 1.1.0
   sirv-cli: 2.0.2
   spotify-web-api-node: 5.0.2
@@ -383,7 +383,7 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
-  /@rollup/plugin-graphql/1.1.0_wvgxa4tpgmyetagc7e4kukhube:
+  /@rollup/plugin-graphql/1.1.0_65bm22uixl7h2qfprv2welfmfm:
     resolution: {integrity: sha512-X+H6oFlprDlnO3D0UiEytdW97AMphPXO0C7KunS7i/rBXIGQRQVDU5WKTXnBu2tfyYbjCTtfhXMSGI0i885PNg==}
     peerDependencies:
       graphql: '>=0.9.0'
@@ -392,7 +392,7 @@ packages:
       '@rollup/pluginutils': 4.2.1
       graphql: 16.6.0
       graphql-tag: 2.12.6_graphql@16.6.0
-      rollup: 2.79.1
+      rollup: 3.2.3
     dev: true
 
   /@rollup/pluginutils/4.2.1:
@@ -2317,9 +2317,9 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /rollup/2.79.1:
-    resolution: {integrity: sha512-uKxbd0IhMZOhjAiD5oAFp7BqvkA4Dv47qpOCtaNvng4HBwdbWtdOh8f5nZNuk2rp51PMGk3bzfWu5oayNEuYnw==}
-    engines: {node: '>=10.0.0'}
+  /rollup/3.2.3:
+    resolution: {integrity: sha512-qfadtkY5kl0F5e4dXVdj2D+GtOdifasXHFMiL1SMf9ADQDv5Eti6xReef9FKj+iQPR2pvtqWna57s/PjARY4fg==}
+    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
