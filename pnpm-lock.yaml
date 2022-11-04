@@ -4,7 +4,7 @@ specifiers:
   '@playwright/experimental-ct-svelte': 1.27.1
   '@playwright/test': 1.27.1
   '@rollup/plugin-graphql': 2.0.2
-  '@sveltejs/adapter-static': 1.0.0-next.46
+  '@sveltejs/adapter-static': 1.0.0-next.48
   '@sveltejs/kit': 1.0.0-next.401
   '@vitest/coverage-istanbul': 0.24.3
   autoprefixer: 10.4.13
@@ -31,7 +31,7 @@ devDependencies:
   '@playwright/experimental-ct-svelte': 1.27.1_svelte@3.52.0
   '@playwright/test': 1.27.1
   '@rollup/plugin-graphql': 2.0.2_wdhvhso3ix65cw74w27vnelfva
-  '@sveltejs/adapter-static': 1.0.0-next.46
+  '@sveltejs/adapter-static': 1.0.0-next.48
   '@sveltejs/kit': 1.0.0-next.401_svelte@3.52.0+vite@3.2.2
   '@vitest/coverage-istanbul': 0.24.3_happy-dom@7.6.6
   autoprefixer: 10.4.13_postcss@8.4.18
@@ -423,8 +423,8 @@ packages:
       rollup: 3.2.5
     dev: true
 
-  /@sveltejs/adapter-static/1.0.0-next.46:
-    resolution: {integrity: sha512-8BlgwD3fjAbtUUgvREjrq5okZSXMTU/Qla99RhTqGaFo+uOrUzguKrXvjeaD4GzxQZdQUNyTX9hKT0V7tX6TMw==}
+  /@sveltejs/adapter-static/1.0.0-next.48:
+    resolution: {integrity: sha512-Z5Z+QZOav6D0KDeU3ReksGERJg/sX1k5OKWWXyQ11OwGErEEwSXHYRUyjaBmZEPeGzpVVGwwMUK8YWJlG/MKeA==}
     dev: true
 
   /@sveltejs/kit/1.0.0-next.401_svelte@3.52.0+vite@3.2.2:
