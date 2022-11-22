@@ -1,8 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@playwright/experimental-ct-svelte': 1.27.1
-  '@playwright/test': 1.27.1
+  '@playwright/experimental-ct-svelte': 1.28.0
+  '@playwright/test': 1.28.0
   '@rollup/plugin-graphql': 2.0.2
   '@sveltejs/adapter-static': 1.0.0-next.48
   '@sveltejs/kit': 1.0.0-next.401
@@ -14,7 +14,7 @@ specifiers:
   html-minifier-terser: 7.0.0
   lodash.merge: 4.6.2
   npm-run-all: 4.1.5
-  playwright: 1.27.1
+  playwright: 1.28.0
   postcss: 8.4.19
   rollup: 3.4.0
   rollup-plugin-dot: 1.1.0
@@ -28,8 +28,8 @@ specifiers:
   vitest: 0.25.0
 
 devDependencies:
-  '@playwright/experimental-ct-svelte': 1.27.1_svelte@3.53.1
-  '@playwright/test': 1.27.1
+  '@playwright/experimental-ct-svelte': 1.28.0_svelte@3.53.1
+  '@playwright/test': 1.28.0
   '@rollup/plugin-graphql': 2.0.2_xvrbi6pw337yowmjjm27jsstfy
   '@sveltejs/adapter-static': 1.0.0-next.48
   '@sveltejs/kit': 1.0.0-next.401_svelte@3.53.1+vite@3.2.3
@@ -41,7 +41,7 @@ devDependencies:
   html-minifier-terser: 7.0.0
   lodash.merge: 4.6.2
   npm-run-all: 4.1.5
-  playwright: 1.27.1
+  playwright: 1.28.0
   postcss: 8.4.19
   rollup: 3.4.0
   rollup-plugin-dot: 1.1.0
@@ -353,12 +353,12 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@playwright/experimental-ct-svelte/1.27.1_svelte@3.53.1:
-    resolution: {integrity: sha512-FDJN6DGag6+QTm/SYHeniBb8sEe1QSgqlIFq24z1b1t8Yrt/YdRSQLlDnAEtd1jwbglzTjxedzJxDd4UzjizfQ==}
+  /@playwright/experimental-ct-svelte/1.28.0_svelte@3.53.1:
+    resolution: {integrity: sha512-hD86Synxf1DFf2fW77mawl5VgCaB7KxTtUj2vPaVQ+l0igTByMVdKb1wmc7Er6Emq6Le0CMPffsxz0dzApgnNA==}
     engines: {node: '>=14'}
     dependencies:
-      '@playwright/test': 1.27.1
-      '@sveltejs/vite-plugin-svelte': 1.0.8_svelte@3.53.1+vite@3.2.3
+      '@playwright/test': 1.28.0
+      '@sveltejs/vite-plugin-svelte': 1.2.0_svelte@3.53.1+vite@3.2.3
       vite: 3.2.3
     transitivePeerDependencies:
       - '@types/node'
@@ -372,13 +372,13 @@ packages:
       - terser
     dev: true
 
-  /@playwright/test/1.27.1:
-    resolution: {integrity: sha512-mrL2q0an/7tVqniQQF6RBL2saskjljXzqNcCOVMUjRIgE6Y38nCNaP+Dc2FBW06bcpD3tqIws/HT9qiMHbNU0A==}
+  /@playwright/test/1.28.0:
+    resolution: {integrity: sha512-vrHs5DFTPwYox5SGKq/7TDn/S4q6RA1zArd7uhO6EyP9hj3XgZBBM12ktMbnDQNxh/fL1IUKsTNLxihmsU38lQ==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
       '@types/node': 18.7.21
-      playwright-core: 1.27.1
+      playwright-core: 1.28.0
     dev: true
 
   /@polka/url/1.0.0-next.21:
@@ -466,6 +466,29 @@ packages:
       svelte: 3.53.1
       svelte-hmr: 0.15.0_svelte@3.53.1
       vite: 3.2.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@sveltejs/vite-plugin-svelte/1.2.0_svelte@3.53.1+vite@3.2.3:
+    resolution: {integrity: sha512-DT2oUkWAloH1tO7X5cQ4uDxQofaIS76skyFMElKtoqT6HJao+D82LI5i+0jPaSSmO7ex3Pa6jGYMlWy9ZJ1cdQ==}
+    engines: {node: ^14.18.0 || >= 16}
+    peerDependencies:
+      diff-match-patch: ^1.0.5
+      svelte: ^3.44.0
+      vite: ^3.0.0
+    peerDependenciesMeta:
+      diff-match-patch:
+        optional: true
+    dependencies:
+      debug: 4.3.4
+      deepmerge: 4.2.2
+      kleur: 4.1.5
+      magic-string: 0.26.7
+      svelte: 3.53.1
+      svelte-hmr: 0.15.1_svelte@3.53.1
+      vite: 3.2.3
+      vitefu: 0.2.1_vite@3.2.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1795,6 +1818,13 @@ packages:
       sourcemap-codec: 1.4.8
     dev: true
 
+  /magic-string/0.26.7:
+    resolution: {integrity: sha512-hX9XH3ziStPoPhJxLq1syWuZMxbDvGNbVchfrdCtanC7D13888bMFow61x8axrx+GfHLtVeAx2kxL7tTGRl+Ow==}
+    engines: {node: '>=12'}
+    dependencies:
+      sourcemap-codec: 1.4.8
+    dev: true
+
   /make-dir/3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
     engines: {node: '>=8'}
@@ -2069,19 +2099,19 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /playwright-core/1.27.1:
-    resolution: {integrity: sha512-9EmeXDncC2Pmp/z+teoVYlvmPWUC6ejSSYZUln7YaP89Z6lpAaiaAnqroUt/BoLo8tn7WYShcfaCh+xofZa44Q==}
+  /playwright-core/1.28.0:
+    resolution: {integrity: sha512-nJLknd28kPBiCNTbqpu6Wmkrh63OEqJSFw9xOfL9qxfNwody7h6/L3O2dZoWQ6Oxcm0VOHjWmGiCUGkc0X3VZA==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
 
-  /playwright/1.27.1:
-    resolution: {integrity: sha512-xXYZ7m36yTtC+oFgqH0eTgullGztKSRMb4yuwLPl8IYSmgBM88QiB+3IWb1mRIC9/NNwcgbG0RwtFlg+EAFQHQ==}
+  /playwright/1.28.0:
+    resolution: {integrity: sha512-kyOXGc5y1mgi+hgEcCIyE1P1+JumLrxS09nFHo5sdJNzrucxPRAGwM4A2X3u3SDOfdgJqx61yIoR6Av+5plJPg==}
     engines: {node: '>=14'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      playwright-core: 1.27.1
+      playwright-core: 1.28.0
     dev: true
 
   /postcss-functions/3.0.0:
@@ -2626,6 +2656,15 @@ packages:
       svelte: 3.53.1
     dev: true
 
+  /svelte-hmr/0.15.1_svelte@3.53.1:
+    resolution: {integrity: sha512-BiKB4RZ8YSwRKCNVdNxK/GfY+r4Kjgp9jCLEy0DuqAKfmQtpL38cQK3afdpjw4sqSs4PLi3jIPJIFp259NkZtA==}
+    engines: {node: ^12.20 || ^14.13.1 || >= 16}
+    peerDependencies:
+      svelte: '>=3.19.0'
+    dependencies:
+      svelte: 3.53.1
+    dev: true
+
   /svelte/3.53.1:
     resolution: {integrity: sha512-Q4/hHkktZogGhN5iqxqSi9sjEVoe/NbIxX4hXEHoasTxj+TxEQVAq66LnDMdAZxjmsodkoI5F3slqsS68U7FNw==}
     engines: {node: '>= 8'}
@@ -2906,6 +2945,17 @@ packages:
       rollup: 2.79.1
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /vitefu/0.2.1_vite@3.2.3:
+    resolution: {integrity: sha512-clkvXTAeUf+XQKm3bhWUhT4pye+3acm6YCTGaWhxxIvZZ/QjnA3JA8Zud+z/mO5y5XYvJJhevs5Sjkv/FI8nRw==}
+    peerDependencies:
+      vite: ^3.0.0
+    peerDependenciesMeta:
+      vite:
+        optional: true
+    dependencies:
+      vite: 3.2.3
     dev: true
 
   /vitest/0.25.0_happy-dom@7.7.0:
