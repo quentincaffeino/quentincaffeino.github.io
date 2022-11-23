@@ -1,5 +1,5 @@
 import { minify } from "html-minifier-terser";
-import { prerendering } from "$app/environment";
+import { building } from "$app/environment";
 
 const minification_options = {
   collapseBooleanAttributes: true,
@@ -23,7 +23,7 @@ const minification_options = {
 export async function handle({ event, resolve }) {
   const response = await resolve(event);
 
-  if (prerendering && response.headers.get("content-type") === "text/html") {
+  if (building && response.headers.get("content-type") === "text/html") {
     return new Response(
       await minify(await response.text(), minification_options),
       {
