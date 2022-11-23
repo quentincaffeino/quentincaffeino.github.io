@@ -1,52 +1,20 @@
-<script context="module">
-  import { fetchUserData } from "$lib/api/github";
-  import Blocks, { blocksMap } from "$lib/blocks/index.svelte";
-
-  const ghUsername = import.meta.env.VITE_GH_USERNAME;
-
-  /**
-   * @type {import('@sveltejs/kit').Load}
-   */
-  export async function load({ fetch }) {
-    let userData = {};
-
-    if (ghUsername) {
-      userData = (await fetchUserData({ fetch }).catch(console.error)) || {};
-    }
-
-    const readyBlocks = [];
-
-    for (const [name, { load, component }] of blocksMap.entries()) {
-      const data = await load({ fetch });
-
-      readyBlocks.push({
-        name,
-        component,
-        data,
-      });
-    }
-
-    return {
-      props: {
-        userData,
-        blocks: readyBlocks,
-      },
-    };
-  }
-</script>
-
 <script>
   import MainSection from "$lib/sections/Main.svelte";
   import ToTopButton from "$lib/components/ToTopButton.svelte";
+  import Blocks from "$lib/blocks/index.svelte";
 
-  // @hmr:keep
-  export let userData;
-  // @hmr:keep
-  export let blocks;
+  const GH_USERNAME = import.meta.env.VITE_GH_USERNAME;
+
+  // @hmr:keep-all
+
+  /** @type {import('./$types').PageData} */
+  export let data;
+  let { userData, blocks } = data;
+  $: ({ userData, blocks } = data);
 </script>
 
 <svelte:head>
-  <title>{ghUsername}</title>
+  <title>{GH_USERNAME}</title>
 </svelte:head>
 
 <section class="h-screen">
@@ -81,7 +49,7 @@
 </footer>
 
 <div>
-  {#each blocks as block}
+  {#each [...blocks.values()] as block}
     <section id={block.name} class="mb-6 bg-gray-50">
       <Blocks name={block.name} props={block.data} />
     </section>

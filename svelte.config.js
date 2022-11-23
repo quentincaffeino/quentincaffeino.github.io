@@ -9,15 +9,6 @@ const config = {
       fallback: "200.html",
       // precompress: true,
     }),
-
-    browser: {
-      hydrate: false,
-      router: false,
-    },
-
-    prerender: {
-      default: true,
-    },
   },
 };
 

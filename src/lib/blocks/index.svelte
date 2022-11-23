@@ -7,7 +7,11 @@
   blocksMap.set("topartists", topartists);
 
   function getBlockComponent(name) {
-    return blocksMap.get(name)?.component;
+    const block = blocksMap.get(name);
+    if (!block) {
+      throw new Error("unable to find block " + name);
+    }
+    return block.component;
   }
 </script>
 

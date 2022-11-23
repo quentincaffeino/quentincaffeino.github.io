@@ -2,7 +2,7 @@
   import MailIcon from "svelte-feather-icons/src/icons/MailIcon.svelte";
   import ChevronDownIcon from "svelte-feather-icons/src/icons/ChevronDownIcon.svelte";
 
-  const ghUsername = import.meta.env.VITE_GH_USERNAME;
+  const GH_USERNAME = import.meta.env.VITE_GH_USERNAME;
 
   export let userData;
 </script>
@@ -33,10 +33,10 @@
         </h3>
 
         <div class="flex flex-row flex-wrap justify-center px-3 space-x-4">
-          {#if ghUsername}
+          {#if GH_USERNAME}
             <div class="btn">
               <a
-                href="https://github.com/{ghUsername}"
+                href="https://github.com/{GH_USERNAME}"
                 rel="noreferrer noopener external"
                 target="_blank"
               >

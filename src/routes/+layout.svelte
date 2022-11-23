@@ -1,7 +1,3 @@
-<script context="module">
-  export const prerender = true;
-</script>
-
 <main class="container px-3 mx-auto">
   <slot />
 </main>

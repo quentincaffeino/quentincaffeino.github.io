@@ -5,7 +5,7 @@ const AUTHORIZATION_HEADER = "Authorization";
 /**
  * @param {string} path
  * @param {string} token
- * @param {{ authViaQuery?: boolean }} props
+ * @param {{ authViaQuery?: boolean, requestInit?: RequestInit }} props
  * @returns {Request}
  */
 export default function prepareAuthorizedGithubRequest(
@@ -21,11 +21,14 @@ export default function prepareAuthorizedGithubRequest(
   // But this can be helpful for testing purposes
   if (props.authViaQuery) {
     urlObj.searchParams.set(ACCESS_TOKEN_URL_PARAM_KEY, token);
-    request = new Request(urlObj);
+    request = new Request(urlObj, props?.requestInit || {});
   } else {
-    request = new Request(urlObj, {
-      credentials: "include",
-    });
+    request = new Request(
+      urlObj,
+      Object.assign({}, props?.requestInit, {
+        credentials: "include",
+      })
+    );
 
     request.headers.set(AUTHORIZATION_HEADER, "Bearer " + token);
   }
