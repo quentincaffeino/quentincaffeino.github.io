@@ -10,7 +10,7 @@ specifiers:
   autoprefixer: 10.4.13
   dotenv: 16.0.3
   graphql: 16.6.0
-  happy-dom: 7.8.1
+  happy-dom: 8.1.0
   html-minifier-terser: 7.1.0
   lodash.merge: 4.6.2
   npm-run-all: 4.1.5
@@ -33,11 +33,11 @@ devDependencies:
   '@rollup/plugin-graphql': 2.0.2_442f4xqz5npmihfrq3xsyicr6q
   '@sveltejs/adapter-static': 1.0.0-next.48
   '@sveltejs/kit': 1.0.0-next.572_svelte@3.54.0+vite@3.2.5
-  '@vitest/coverage-istanbul': 0.25.0_happy-dom@7.8.1
+  '@vitest/coverage-istanbul': 0.25.0_happy-dom@8.1.0
   autoprefixer: 10.4.13_postcss@8.4.19
   dotenv: 16.0.3
   graphql: 16.6.0
-  happy-dom: 7.8.1
+  happy-dom: 8.1.0
   html-minifier-terser: 7.1.0
   lodash.merge: 4.6.2
   npm-run-all: 4.1.5
@@ -52,7 +52,7 @@ devDependencies:
   tailwindcss: 3.2.4_postcss@8.4.19
   tailwindcss-textshadow: 2.1.3
   vite: 3.2.5
-  vitest: 0.25.0_happy-dom@7.8.1
+  vitest: 0.25.0_happy-dom@8.1.0
 
 packages:
 
@@ -520,7 +520,7 @@ packages:
     resolution: {integrity: sha512-rLFzK5bhM0YPyCoTC8bolBjMk7bwnZ8qeZUBslBfjZQou2ssJdWslx9CZ8DGM+Dx7QXQiiTVZ/6QO6kwtHkZCA==}
     dev: true
 
-  /@vitest/coverage-istanbul/0.25.0_happy-dom@7.8.1:
+  /@vitest/coverage-istanbul/0.25.0_happy-dom@8.1.0:
     resolution: {integrity: sha512-/5H4doACy6GRy/3miDYkjCP2iWO9xjlOqrIxPXMmHSs6NsfWpoF7la9E3QqNjCu+9bvDK9bURObR2K4Cu2iruw==}
     dependencies:
       istanbul-lib-coverage: 3.2.0
@@ -529,7 +529,7 @@ packages:
       istanbul-lib-source-maps: 4.0.1
       istanbul-reports: 3.1.5
       test-exclude: 6.0.0
-      vitest: 0.25.0_happy-dom@7.8.1
+      vitest: 0.25.0_happy-dom@8.1.0
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -1410,8 +1410,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
     dev: true
 
-  /happy-dom/7.8.1:
-    resolution: {integrity: sha512-lKpeGDtA0FqS/LpAEU+5N5kKkmW5TOjZCXZDnF7YtWuvKP9iwCqpeshG9gXA/H+gX0VQ/I/OToy73+umx1NQUw==}
+  /happy-dom/8.1.0:
+    resolution: {integrity: sha512-R9NVb5815gpMFsldZF0wVSHw2uSobx6yitSkCdQPda1kwfAmVw4Ut8ZspxGHXkK6OA93SznldkcvrbhKFr6JcA==}
     dependencies:
       css.escape: 1.5.1
       he: 1.2.0
@@ -2875,7 +2875,7 @@ packages:
       vite: 3.2.5
     dev: true
 
-  /vitest/0.25.0_happy-dom@7.8.1:
+  /vitest/0.25.0_happy-dom@8.1.0:
     resolution: {integrity: sha512-CVgBdKSeA27mowKC/C31Tx7ZBjRoyasq/yW7zoqUaCdKaOsjdzRUH5KgSL3eG36DzaaUsbnwWPUbAOtFz5k6tQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -2904,7 +2904,7 @@ packages:
       acorn-walk: 8.2.0
       chai: 4.3.6
       debug: 4.3.4
-      happy-dom: 7.8.1
+      happy-dom: 8.1.0
       local-pkg: 0.4.2
       source-map: 0.6.1
       strip-literal: 0.4.2
