@@ -6,7 +6,7 @@ specifiers:
   '@rollup/plugin-graphql': 2.0.2
   '@sveltejs/adapter-static': 1.0.0-next.48
   '@sveltejs/kit': 1.0.0-next.577
-  '@vitest/coverage-istanbul': 0.26.0
+  '@vitest/coverage-istanbul': 0.26.3
   autoprefixer: 10.4.13
   dotenv: 16.0.3
   graphql: 16.6.0
@@ -25,7 +25,7 @@ specifiers:
   tailwindcss: 3.2.4
   tailwindcss-textshadow: 2.1.3
   vite: 4.0.2
-  vitest: 0.26.1
+  vitest: 0.26.3
 
 devDependencies:
   '@playwright/experimental-ct-svelte': 1.29.0_svelte@3.55.0
@@ -33,7 +33,7 @@ devDependencies:
   '@rollup/plugin-graphql': 2.0.2_g2tl673ksdojasbjsv4vubfdsu
   '@sveltejs/adapter-static': 1.0.0-next.48
   '@sveltejs/kit': 1.0.0-next.577_svelte@3.55.0+vite@4.0.2
-  '@vitest/coverage-istanbul': 0.26.0_happy-dom@8.1.0
+  '@vitest/coverage-istanbul': 0.26.3_happy-dom@8.1.0
   autoprefixer: 10.4.13_postcss@8.4.20
   dotenv: 16.0.3
   graphql: 16.6.0
@@ -52,7 +52,7 @@ devDependencies:
   tailwindcss: 3.2.4_postcss@8.4.20
   tailwindcss-textshadow: 2.1.3
   vite: 4.0.2
-  vitest: 0.26.1_happy-dom@8.1.0
+  vitest: 0.26.3_happy-dom@8.1.0
 
 packages:
 
@@ -718,8 +718,8 @@ packages:
     resolution: {integrity: sha512-rLFzK5bhM0YPyCoTC8bolBjMk7bwnZ8qeZUBslBfjZQou2ssJdWslx9CZ8DGM+Dx7QXQiiTVZ/6QO6kwtHkZCA==}
     dev: true
 
-  /@vitest/coverage-istanbul/0.26.0_happy-dom@8.1.0:
-    resolution: {integrity: sha512-rmXjOipkwnmhAyJ8wCLY0bJBUI/MjA3yMElnGIBTQbEQsgJVUQoLKkwZNYg1RD/yiuq7wpqRXF2pU4+b5DpOgw==}
+  /@vitest/coverage-istanbul/0.26.3_happy-dom@8.1.0:
+    resolution: {integrity: sha512-pJRxb+mGy11WdYiam6iW6N4CyhaBbpne+CGPqYGid74SplcR8N07JT3ETDoHKqh5vJCX5UnEIYIreanvFjgLHg==}
     dependencies:
       istanbul-lib-coverage: 3.2.0
       istanbul-lib-instrument: 5.2.1
@@ -727,7 +727,7 @@ packages:
       istanbul-lib-source-maps: 4.0.1
       istanbul-reports: 3.1.5
       test-exclude: 6.0.0
-      vitest: 0.26.0_happy-dom@8.1.0
+      vitest: 0.26.3_happy-dom@8.1.0
     transitivePeerDependencies:
       - '@edge-runtime/vm'
       - '@vitest/browser'
@@ -3047,29 +3047,8 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite-node/0.26.0_@types+node@18.7.21:
-    resolution: {integrity: sha512-nLtHWCv6reONl1oFsKhQ/LT7n3UNLpvVARAJlmGrQV6qSElht/9AdN41Pa+WSkw2Winh682UzM0Yw0GNlfqejw==}
-    engines: {node: '>=v14.16.0'}
-    hasBin: true
-    dependencies:
-      debug: 4.3.4
-      mlly: 1.0.0
-      pathe: 0.2.0
-      source-map: 0.6.1
-      source-map-support: 0.5.21
-      vite: 4.0.2_@types+node@18.7.21
-    transitivePeerDependencies:
-      - '@types/node'
-      - less
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-    dev: true
-
-  /vite-node/0.26.1_@types+node@18.7.21:
-    resolution: {integrity: sha512-5FJSKZZJz48zFRKHE55WyevZe61hLMQEsqGn+ungfd60kxEztFybZ3yG9ToGFtOWNCCy7Vn5EVuXD8bdeHOSdw==}
+  /vite-node/0.26.3_@types+node@18.7.21:
+    resolution: {integrity: sha512-Te2bq0Bfvq6XiO718I+1EinMjpNYKws6SNHKOmVbILAQimKoZKDd+IZLlkaYcBXPpK3HFe2U80k8Zw+m3w/a2w==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     dependencies:
@@ -3211,8 +3190,8 @@ packages:
       vite: 4.0.2
     dev: true
 
-  /vitest/0.26.0_happy-dom@8.1.0:
-    resolution: {integrity: sha512-5kUnms5WOa0qrDCJePEPB13v9mhr+ZT1Qy0qNg0eVj1X7/Fx4GY4L1e5s3OH+BQ/J7M5WtaKsUGv9l1pbC7v2Q==}
+  /vitest/0.26.3_happy-dom@8.1.0:
+    resolution: {integrity: sha512-FmHxU9aUCxTi23keF3vxb/Qp0lYXaaJ+jRLGOUmMS3qVTOJvgGE+f1VArupA6pEhaG2Ans4X+zV9dqM5WISMbg==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
@@ -3248,54 +3227,7 @@ packages:
       tinypool: 0.3.0
       tinyspy: 1.0.2
       vite: 4.0.2_@types+node@18.7.21
-      vite-node: 0.26.0_@types+node@18.7.21
-    transitivePeerDependencies:
-      - less
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-    dev: true
-
-  /vitest/0.26.1_happy-dom@8.1.0:
-    resolution: {integrity: sha512-qTLRnjYmjmJpHlLUtErxtlRqGCe8WItFhGXKklpWivu7CLP9KXN9iTezROe+vf51Kb+BB/fzxK6fUG9DvFGL5Q==}
-    engines: {node: '>=v14.16.0'}
-    hasBin: true
-    peerDependencies:
-      '@edge-runtime/vm': '*'
-      '@vitest/browser': '*'
-      '@vitest/ui': '*'
-      happy-dom: '*'
-      jsdom: '*'
-    peerDependenciesMeta:
-      '@edge-runtime/vm':
-        optional: true
-      '@vitest/browser':
-        optional: true
-      '@vitest/ui':
-        optional: true
-      happy-dom:
-        optional: true
-      jsdom:
-        optional: true
-    dependencies:
-      '@types/chai': 4.3.4
-      '@types/chai-subset': 1.3.3
-      '@types/node': 18.7.21
-      acorn: 8.8.1
-      acorn-walk: 8.2.0
-      chai: 4.3.7
-      debug: 4.3.4
-      happy-dom: 8.1.0
-      local-pkg: 0.4.2
-      source-map: 0.6.1
-      strip-literal: 1.0.0
-      tinybench: 2.3.1
-      tinypool: 0.3.0
-      tinyspy: 1.0.2
-      vite: 4.0.2_@types+node@18.7.21
-      vite-node: 0.26.1_@types+node@18.7.21
+      vite-node: 0.26.3_@types+node@18.7.21
     transitivePeerDependencies:
       - less
       - sass
