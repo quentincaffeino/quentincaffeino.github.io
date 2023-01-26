@@ -5,7 +5,7 @@ specifiers:
   '@playwright/test': 1.29.2
   '@rollup/plugin-graphql': 2.0.2
   '@sveltejs/adapter-static': 1.0.5
-  '@sveltejs/kit': 1.2.9
+  '@sveltejs/kit': 1.3.1
   '@vitest/coverage-istanbul': 0.28.1
   autoprefixer: 10.4.13
   dotenv: 16.0.3
@@ -30,8 +30,8 @@ devDependencies:
   '@playwright/experimental-ct-svelte': 1.29.2_svelte@3.55.0
   '@playwright/test': 1.29.2
   '@rollup/plugin-graphql': 2.0.2_z63ucerw3cu5iyboqbhartmdcm
-  '@sveltejs/adapter-static': 1.0.5_@sveltejs+kit@1.2.9
-  '@sveltejs/kit': 1.2.9_svelte@3.55.0+vite@4.0.4
+  '@sveltejs/adapter-static': 1.0.5_@sveltejs+kit@1.3.1
+  '@sveltejs/kit': 1.3.1_svelte@3.55.0+vite@4.0.4
   '@vitest/coverage-istanbul': 0.28.1_happy-dom@8.1.3
   autoprefixer: 10.4.13_postcss@8.4.20
   dotenv: 16.0.3
@@ -612,16 +612,16 @@ packages:
       rollup: 3.10.1
     dev: true
 
-  /@sveltejs/adapter-static/1.0.5_@sveltejs+kit@1.2.9:
+  /@sveltejs/adapter-static/1.0.5_@sveltejs+kit@1.3.1:
     resolution: {integrity: sha512-W5jbgvy9sbYEHs27NQOSFEun+zQwdcL4kpk5qc2kSHl8cKsP5wfXuWDTDRmD1Co40aFcesi5Az5ZzdnPI8KCVg==}
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
     dependencies:
-      '@sveltejs/kit': 1.2.9_svelte@3.55.0+vite@4.0.4
+      '@sveltejs/kit': 1.3.1_svelte@3.55.0+vite@4.0.4
     dev: true
 
-  /@sveltejs/kit/1.2.9_svelte@3.55.0+vite@4.0.4:
-    resolution: {integrity: sha512-zHuYwMgCJpmgYoQ1EOIgNFNkBTKqErHH+fqZVfNmEw2hICoKZHIjqm8/fetRUtF71dqXq0TmPS/HuCCBHXQiZw==}
+  /@sveltejs/kit/1.3.1_svelte@3.55.0+vite@4.0.4:
+    resolution: {integrity: sha512-IjZDhByOlWiyJRsa2SQhSYsMqJu62UGMVdSP0hFWIiKOxqHjmixZwIVUBljG2YSMmb0JP3hA9/oaCdstGWRu/Q==}
     engines: {node: ^16.14 || >=18}
     hasBin: true
     requiresBuild: true
