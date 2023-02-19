@@ -15,7 +15,7 @@ specifiers:
   lodash.merge: 4.6.2
   npm-run-all: 4.1.5
   postcss: 8.4.20
-  rollup: 3.10.1
+  rollup: 3.17.1
   rollup-plugin-dot: 1.1.0
   sirv-cli: 2.0.2
   spotify-web-api-node: 5.0.2
@@ -29,7 +29,7 @@ specifiers:
 devDependencies:
   '@playwright/experimental-ct-svelte': 1.29.2_svelte@3.55.0
   '@playwright/test': 1.29.2
-  '@rollup/plugin-graphql': 2.0.2_z63ucerw3cu5iyboqbhartmdcm
+  '@rollup/plugin-graphql': 2.0.2_a6ycvw7yjadojtzcavvythi5ni
   '@sveltejs/adapter-static': 1.0.6_@sveltejs+kit@1.5.5
   '@sveltejs/kit': 1.5.5_svelte@3.55.0+vite@4.1.1
   '@vitest/coverage-istanbul': 0.28.4_happy-dom@8.2.6
@@ -41,7 +41,7 @@ devDependencies:
   lodash.merge: 4.6.2
   npm-run-all: 4.1.5
   postcss: 8.4.20
-  rollup: 3.10.1
+  rollup: 3.17.1
   rollup-plugin-dot: 1.1.0
   sirv-cli: 2.0.2
   spotify-web-api-node: 5.0.2
@@ -581,7 +581,7 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
-  /@rollup/plugin-graphql/2.0.2_z63ucerw3cu5iyboqbhartmdcm:
+  /@rollup/plugin-graphql/2.0.2_a6ycvw7yjadojtzcavvythi5ni:
     resolution: {integrity: sha512-5kghuwAgcvdNrSARRLffKI6BDC3NskormIobhaO6nLdUhWFUJUB66zsgcXKqJu9kDXgiqLthjk7OaMxw552O9g==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -591,13 +591,13 @@ packages:
       rollup:
         optional: true
     dependencies:
-      '@rollup/pluginutils': 5.0.2_rollup@3.10.1
+      '@rollup/pluginutils': 5.0.2_rollup@3.17.1
       graphql: 16.6.0
       graphql-tag: 2.12.6_graphql@16.6.0
-      rollup: 3.10.1
+      rollup: 3.17.1
     dev: true
 
-  /@rollup/pluginutils/5.0.2_rollup@3.10.1:
+  /@rollup/pluginutils/5.0.2_rollup@3.17.1:
     resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -609,7 +609,7 @@ packages:
       '@types/estree': 1.0.0
       estree-walker: 2.0.2
       picomatch: 2.3.1
-      rollup: 3.10.1
+      rollup: 3.17.1
     dev: true
 
   /@sveltejs/adapter-static/1.0.6_@sveltejs+kit@1.5.5:
@@ -2735,8 +2735,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /rollup/3.10.1:
-    resolution: {integrity: sha512-3Er+yel3bZbZX1g2kjVM+FW+RUWDxbG87fcqFM5/9HbPCTpbVp6JOLn7jlxnNlbu7s/N/uDA4EV/91E2gWnxzw==}
+  /rollup/3.17.1:
+    resolution: {integrity: sha512-8RnSms6rNqHmZK+wiqgnPCqen+rRnUHXkciGDirh7B00g1rX1vpKbPDhuxCvAG2bburoI+W4Q9/PlUB/zYkiYA==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -3338,7 +3338,7 @@ packages:
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
-      rollup: 3.10.1
+      rollup: 3.17.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -3372,7 +3372,7 @@ packages:
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
-      rollup: 3.10.1
+      rollup: 3.17.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
