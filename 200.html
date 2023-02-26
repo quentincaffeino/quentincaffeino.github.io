@@ -1,8 +1,14 @@
-<!DOCTYPE html> <html lang=en> <head> <meta charset=utf-8> <meta content="width=device-width,initial-scale=1" name=viewport> <link href=/favicon.png rel=icon> <meta content="" http-equiv=content-security-policy> <link href=/_app/immutable/start-f5cd3ba8.js rel=modulepreload> <link href=/_app/immutable/chunks/index-9ed7b7f4.js rel=modulepreload> <link href=/_app/immutable/chunks/singletons-a2a3dcf0.js rel=modulepreload> </head> <body> <div id=sveltekit> <script data-sveltekit-hydrate=45h type=module> import { start } from "/_app/immutable/start-f5cd3ba8.js";
+<!DOCTYPE html> <html lang=en> <head> <meta charset=utf-8> <meta content="width=device-width,initial-scale=1" name=viewport> <link href=/favicon.png rel=icon> <meta content="" http-equiv=content-security-policy> <link href=/_app/immutable/entry/start.383366e7.js rel=modulepreload> <link href=/_app/immutable/chunks/index.9ed98961.js rel=modulepreload> <link href=/_app/immutable/chunks/singletons.9103ca28.js rel=modulepreload> <link href=/_app/immutable/entry/app.60ee8066.js rel=modulepreload> </head> <body> <div id=sveltekit> <script> {
+					__sveltekit_13dvb9z = {
+						env: {},
+						assets: "",
+						element: document.currentScript.parentElement
+					};
 
-			start({
-				assets: "",
-				env: {},
-				target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-				version: "1677436922819"
-			}); </script></div> 
+					Promise.all([
+						import("/_app/immutable/entry/start.383366e7.js"),
+						import("/_app/immutable/entry/app.60ee8066.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_13dvb9z.element);
+					});
+				} </script> </div> 
