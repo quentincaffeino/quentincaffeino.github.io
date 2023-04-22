@@ -30,16 +30,6 @@ jobs:
       - name: Install Playwright Browsers
         run: pnpm playwright install --with-deps
 
-      - name: Run tests
-        env:
-          VITE_GH_USERNAME: ${{ github.actor }}
-          VITE_GH_OAUTH_TOKEN: ${{ github.token }}
-          VITE_LASTFM_USER: ${{ secrets.VITE_LASTFM_USER }}
-          VITE_LASTFM_API_KEY: ${{ secrets.VITE_LASTFM_API_KEY }}
-          VITE_SPOTIFY_CLIENT_ID: ${{ secrets.VITE_SPOTIFY_CLIENT_ID }}
-          VITE_SPOTIDY_CLIENT_SECRET: ${{ secrets.VITE_SPOTIDY_CLIENT_SECRET }}
-        run: pnpm ci:test
-
       - name: Build the project 🛠️
         env:
           VITE_GH_USERNAME: ${{ github.actor }}
@@ -49,6 +39,16 @@ jobs:
           VITE_SPOTIFY_CLIENT_ID: ${{ secrets.VITE_SPOTIFY_CLIENT_ID }}
           VITE_SPOTIDY_CLIENT_SECRET: ${{ secrets.VITE_SPOTIDY_CLIENT_SECRET }}
         run: pnpm ci:build
+
+      - name: Run tests
+        env:
+          VITE_GH_USERNAME: ${{ github.actor }}
+          VITE_GH_OAUTH_TOKEN: ${{ github.token }}
+          VITE_LASTFM_USER: ${{ secrets.VITE_LASTFM_USER }}
+          VITE_LASTFM_API_KEY: ${{ secrets.VITE_LASTFM_API_KEY }}
+          VITE_SPOTIFY_CLIENT_ID: ${{ secrets.VITE_SPOTIFY_CLIENT_ID }}
+          VITE_SPOTIDY_CLIENT_SECRET: ${{ secrets.VITE_SPOTIDY_CLIENT_SECRET }}
+        run: pnpm ci:test
 
       - uses: actions/upload-artifact@v3
         if: always()
