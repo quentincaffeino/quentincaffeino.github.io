@@ -12,25 +12,25 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - 
-        name: Checkout 🛎️
+      - name: Checkout 🛎️
         uses: actions/checkout@v3
-      - 
-        name: Setup pnpm ⚙️
+
+      - name: Setup pnpm ⚙️
         uses: pnpm/action-setup@v2
         with:
           version: 7
-      - 
-        name: Setup node ⚙️
+
+      - name: Setup node ⚙️
         uses: actions/setup-node@v3
         with:
-          node-version: 'lts/*'
-          cache: 'pnpm'
-      - 
-        name: Install deps ☁️
-        run: pnpm install
-      - 
-        name: Build the project 🛠️
+          node-version-file: ".node-version"
+          cache: "pnpm"
+          cache-dependency-path: "pnpm-lock.yaml"
+
+      - name: Install deps ☁️
+        run: pnpm install --frozen-lockfile
+
+      - name: Build the project 🛠️
         env:
           VITE_GH_USERNAME: ${{ github.actor }}
           VITE_GH_OAUTH_TOKEN: ${{ secrets.VITE_GH_OAUTH_TOKEN }}
@@ -39,12 +39,12 @@ jobs:
           VITE_SPOTIFY_CLIENT_ID: ${{ secrets.VITE_SPOTIFY_CLIENT_ID }}
           VITE_SPOTIDY_CLIENT_SECRET: ${{ secrets.VITE_SPOTIDY_CLIENT_SECRET }}
         run: pnpm build
-      - 
-        name: Cleanup 🧹
+
+      - name: Cleanup 🧹
         run: |
           find ./build -name "*.js" | xargs rm
-      - 
-        name: Deploy 🚀
+
+      - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           branch: gh-pages
