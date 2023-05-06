@@ -8,8 +8,8 @@ devDependencies:
     specifier: 1.32.1
     version: 1.32.1
   '@rollup/plugin-graphql':
-    specifier: 2.0.2
-    version: 2.0.2(graphql@16.6.0)(rollup@3.21.5)
+    specifier: 2.0.3
+    version: 2.0.3(graphql@16.6.0)(rollup@3.21.5)
   '@sveltejs/adapter-static':
     specifier: 2.0.2
     version: 2.0.2(@sveltejs/kit@1.16.2)
@@ -588,8 +588,8 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
-  /@rollup/plugin-graphql@2.0.2(graphql@16.6.0)(rollup@3.21.5):
-    resolution: {integrity: sha512-5kghuwAgcvdNrSARRLffKI6BDC3NskormIobhaO6nLdUhWFUJUB66zsgcXKqJu9kDXgiqLthjk7OaMxw552O9g==}
+  /@rollup/plugin-graphql@2.0.3(graphql@16.6.0)(rollup@3.21.5):
+    resolution: {integrity: sha512-IuuELo+0t29adRuLVg8izBFiUXFSFw8BmezespscynRfvfXSOV0S7g8RzQt75VzP6KHHVmNmlAgz+8qlkLur3w==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       graphql: '>=0.9.0'
