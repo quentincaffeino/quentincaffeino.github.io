@@ -13,7 +13,7 @@ devDependencies:
     version: 1.35.1
   '@rollup/plugin-graphql':
     specifier: 2.0.3
-    version: 2.0.3(graphql@16.6.0)(rollup@3.25.1)
+    version: 2.0.3(graphql@16.6.0)(rollup@3.25.2)
   '@sveltejs/adapter-static':
     specifier: 2.0.2
     version: 2.0.2(@sveltejs/kit@1.16.3)
@@ -48,8 +48,8 @@ devDependencies:
     specifier: 8.4.24
     version: 8.4.24
   rollup:
-    specifier: 3.25.1
-    version: 3.25.1
+    specifier: 3.25.2
+    version: 3.25.2
   rollup-plugin-dot:
     specifier: 1.1.0
     version: 1.1.0
@@ -613,7 +613,7 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
-  /@rollup/plugin-graphql@2.0.3(graphql@16.6.0)(rollup@3.25.1):
+  /@rollup/plugin-graphql@2.0.3(graphql@16.6.0)(rollup@3.25.2):
     resolution: {integrity: sha512-IuuELo+0t29adRuLVg8izBFiUXFSFw8BmezespscynRfvfXSOV0S7g8RzQt75VzP6KHHVmNmlAgz+8qlkLur3w==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -623,13 +623,13 @@ packages:
       rollup:
         optional: true
     dependencies:
-      '@rollup/pluginutils': 5.0.2(rollup@3.25.1)
+      '@rollup/pluginutils': 5.0.2(rollup@3.25.2)
       graphql: 16.6.0
       graphql-tag: 2.12.6(graphql@16.6.0)
-      rollup: 3.25.1
+      rollup: 3.25.2
     dev: true
 
-  /@rollup/pluginutils@5.0.2(rollup@3.25.1):
+  /@rollup/pluginutils@5.0.2(rollup@3.25.2):
     resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -641,7 +641,7 @@ packages:
       '@types/estree': 1.0.0
       estree-walker: 2.0.2
       picomatch: 2.3.1
-      rollup: 3.25.1
+      rollup: 3.25.2
     dev: true
 
   /@sveltejs/adapter-static@2.0.2(@sveltejs/kit@1.16.3):
@@ -2560,8 +2560,8 @@ packages:
       estree-walker: 0.6.1
     dev: true
 
-  /rollup@3.25.1:
-    resolution: {integrity: sha512-tywOR+rwIt5m2ZAWSe5AIJcTat8vGlnPFAv15ycCrw33t6iFsXZ6mzHVFh2psSjxQPmI+xgzMZZizUAukBI4aQ==}
+  /rollup@3.25.2:
+    resolution: {integrity: sha512-VLnkxZMDr3jpxgtmS8pQZ0UvhslmF4ADq/9w4erkctbgjCqLW9oa89fJuXEs4ZmgyoF7Dm8rMDKSS5b5u2hHUg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -3129,7 +3129,7 @@ packages:
       '@types/node': 18.11.18
       esbuild: 0.17.12
       postcss: 8.4.24
-      rollup: 3.25.1
+      rollup: 3.25.2
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
