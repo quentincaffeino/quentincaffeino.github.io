@@ -19,7 +19,7 @@
     "@playwright/experimental-ct-svelte": "1.35.1",
     "@playwright/test": "1.35.1",
     "@rollup/plugin-graphql": "2.0.3",
-    "@sveltejs/adapter-static": "2.0.2",
+    "@sveltejs/adapter-static": "2.0.3",
     "@sveltejs/kit": "1.22.3",
     "@vitest/coverage-istanbul": "0.32.3",
     "autoprefixer": "10.4.14",
