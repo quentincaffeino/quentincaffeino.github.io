@@ -22,7 +22,7 @@
     "@sveltejs/adapter-static": "2.0.3",
     "@sveltejs/kit": "1.16.1",
     "@vitest/coverage-istanbul": "0.34.4",
-    "autoprefixer": "10.4.15",
+    "autoprefixer": "10.4.16",
     "dotenv": "16.3.1",
     "graphql": "16.8.0",
     "happy-dom": "12.1.5",
