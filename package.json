@@ -24,7 +24,7 @@
     "@vitest/coverage-istanbul": "0.34.5",
     "autoprefixer": "10.4.16",
     "dotenv": "16.3.1",
-    "graphql": "16.8.0",
+    "graphql": "16.8.1",
     "happy-dom": "12.1.5",
     "html-minifier-terser": "7.2.0",
     "lodash.merge": "4.6.2",
