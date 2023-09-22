@@ -16,8 +16,8 @@
     "ci:build": "pnpm build"
   },
   "devDependencies": {
-    "@playwright/experimental-ct-svelte": "1.37.1",
-    "@playwright/test": "1.37.1",
+    "@playwright/experimental-ct-svelte": "1.38.1",
+    "@playwright/test": "1.38.1",
     "@rollup/plugin-graphql": "2.0.3",
     "@sveltejs/adapter-static": "2.0.3",
     "@sveltejs/kit": "1.16.1",
