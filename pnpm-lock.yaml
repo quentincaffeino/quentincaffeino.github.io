@@ -63,8 +63,8 @@ devDependencies:
     specifier: 4.2.8
     version: 4.2.8
   svelte-feather-icons:
-    specifier: 4.0.1
-    version: 4.0.1
+    specifier: 4.1.0
+    version: 4.1.0
   tailwindcss:
     specifier: 3.4.0
     version: 3.4.0
@@ -3398,8 +3398,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-feather-icons@4.0.1:
-    resolution: {integrity: sha512-DMDrlbblaRUHLcTFtKHE4GWQ/Fk/kneGIZrrI75EmTxCu1hgHe8uq8e80ONrmdjL/i3f1d8fkcx73SWng2X6Gg==}
+  /svelte-feather-icons@4.1.0:
+    resolution: {integrity: sha512-fcTL4VzEN4BoccQJjKiui0b9DWEsmO6zGpI0tQTJbthRtNrYheoU487zyA1BD8rj9kj6jbKGmGVo7zbSdRvMvA==}
     dependencies:
       svelte: 3.59.2
     dev: true
