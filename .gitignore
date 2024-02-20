@@ -1,6 +1,7 @@
 
 /.svelte-kit
 /build
+.vscode/
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/linux,osx,windows,visualstudiocode,node
