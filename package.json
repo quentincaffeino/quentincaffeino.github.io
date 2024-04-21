@@ -31,7 +31,7 @@
     "lodash.merge": "4.6.2",
     "npm-run-all2": "6.1.2",
     "postcss": "8.4.38",
-    "rollup": "4.14.1",
+    "rollup": "4.16.1",
     "rollup-plugin-dot": "1.1.0",
     "sirv-cli": "2.0.2",
     "spotify-web-api-node": "5.0.2",
