@@ -12,8 +12,8 @@ devDependencies:
     specifier: 1.41.2
     version: 1.41.2
   '@rollup/plugin-graphql':
-    specifier: 2.0.4
-    version: 2.0.4(graphql@16.8.1)(rollup@4.22.4)
+    specifier: 2.0.5
+    version: 2.0.5(graphql@16.8.1)(rollup@4.22.4)
   '@sveltejs/adapter-static':
     specifier: 3.0.1
     version: 3.0.1(@sveltejs/kit@2.8.3)
@@ -830,8 +830,8 @@ packages:
     resolution: {integrity: sha512-2LuNTFBIO0m7kKIQvvPHN6UE63VjpmL9rnEEaOOaiSPbZK+zUOYIzBAWcED+3XYzhYsd/0mD57VdxAEqqV52CQ==}
     dev: true
 
-  /@rollup/plugin-graphql@2.0.4(graphql@16.8.1)(rollup@4.22.4):
-    resolution: {integrity: sha512-TfaqbbK71VHodCDCoRbPnv2+Tsnlvad2OsGEviURHFl+ZBUyf5wfXgXc9RqZ+xKxSl87Z3YbPhD0z6eWYjuByw==}
+  /@rollup/plugin-graphql@2.0.5(graphql@16.8.1)(rollup@4.22.4):
+    resolution: {integrity: sha512-NMx9uVIheYMOQHV9Aann0sk/2+henT8T5JUbHneOvbD3iUrVUC7AaZ1B1ELJ/1vhqUe2OQIkRtGHzOQwBLoCvg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       graphql: '>=0.9.0'
@@ -855,7 +855,7 @@ packages:
       rollup:
         optional: true
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
       estree-walker: 2.0.2
       picomatch: 2.3.1
       rollup: 4.22.4
@@ -1070,10 +1070,6 @@ packages:
 
   /@types/dot@1.1.5:
     resolution: {integrity: sha512-fguu7IaFdubwG18Y6GbjVM9yItNeQezVCvsXn/QFPe/+Vsbjpz+Rddi3Fg/YX11+xqeaB0sPSfP3ebLI4NNGGw==}
-    dev: true
-
-  /@types/estree@1.0.1:
-    resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
     dev: true
 
   /@types/estree@1.0.5:
