@@ -12,13 +12,13 @@ jobs:
       image: mcr.microsoft.com/playwright:v1.41.2-jammy
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup pnpm ⚙️
         uses: pnpm/action-setup@v4
 
       - name: Setup node ⚙️
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: ".node-version"
           cache: "pnpm"
@@ -50,7 +50,7 @@ jobs:
           VITE_SPOTIDY_CLIENT_SECRET: ${{ secrets.VITE_SPOTIDY_CLIENT_SECRET }}
         run: pnpm ci:test
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         if: always()
         with:
           name: playwright-report
