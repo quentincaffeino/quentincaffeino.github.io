@@ -43,7 +43,7 @@ jobs:
           find ./build -name "*.js" | xargs rm
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.6.1
+        uses: JamesIves/github-pages-deploy-action@v4.7.6
         with:
           branch: gh-pages
           folder: build
