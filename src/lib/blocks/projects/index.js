@@ -28,7 +28,10 @@ export async function load({ fetch }) {
     { requestInit: { method: "POST", body } }
   );
 
-  return fetch(request).then(isResponseOk).then(parseJsonResponseBody);
+  return fetch(request)
+    .then(isResponseOk)
+    .then(parseJsonResponseBody)
+    .catch((error) => ({ error: error.message }));
 }
 
 export default Projects;

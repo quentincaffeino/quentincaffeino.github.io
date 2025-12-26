@@ -9,30 +9,50 @@
 
 <div class="section-body">
   <div
-    class="absolute flex flex-col w-full transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 iphone5:static iphone5:mt-4 iphone5:translate-y-0 iphone5:translate-x-0"
+    class="absolute flex flex-col w-full transform -translate-x-1/2 -translate-y-1/3 top-1/3 left-1/2 iphone5:static iphone5:mt-4 iphone5:translate-y-0 iphone5:translate-x-0"
   >
-    <div class="flex flex-col items-center h-full max-h-[50%] ">
-      <div class="">
+    <div class="flex flex-col h-full max-h-[50%]">
+      <div>
         <img
           src={userData.avatar_url}
-          alt="Sergei ZH"
+          alt={userData.name}
           class="rounded-full max-h-52 max-w-52"
         />
       </div>
 
-      <div class="text-center">
+      <div>
         <h2 class="section-header section-header--1">
-          <span class="text-3xl">Hi! I'm</span>
-          {@html userData.name?.replace(" ", "&nbsp;")}<span class="text-3xl"
-            >,
-          </span>
+          <span>Hello, I'm</span>
+          {@html userData.name?.replace(" ", "&nbsp;")}<span>,</span>
         </h2>
 
-        <h3 class="section-header section-header--2">
-          and {userData.bio}
+        <h3 class="section-header section-header--2 md:max-w-screen-md">
+          {userData.bio}, located in {userData.location}
         </h3>
 
-        <div class="flex flex-row flex-wrap justify-center px-3 space-x-4">
+        <div class="flex flex-row flex-wrap px-3 space-x-4">
+          <div class="btn">
+            <a
+              href="https://www.linkedin.com/in/sergei-zhuravlev"
+              rel="noreferrer noopener external"
+              target="_blank"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="24"
+                height="24"
+                viewBox="0 0 30 30"
+              >
+                <title>LinkedIn</title>
+                <path
+                  d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+
           {#if GH_USERNAME}
             <div class="btn">
               <a
@@ -54,8 +74,8 @@
             </div>
           {/if}
 
-          <div class="">
-            <a href="mailto:sergey95zu@gmail.com">
+          <div>
+            <a href="mailto:sergey95aeses+portfolio@gmail.com">
               <MailIcon size="22" />
             </a>
           </div>

@@ -26,6 +26,21 @@
             <ArchiveIcon size="1x" class="ml-4 opacity-50" />
           </span>
         {/if}
+
+        {#if project.stargazerCount > 0}
+          <!-- Footer -->
+          <div class="flex flex-row px-2 py-1 -mr-1 ml-3 space-x-4 rounded-lg bg-gray-50">
+            {#if project.stargazerCount > 0}
+              <div
+                class="flex flex-row items-center"
+                title="{project.stargazerCount} stars"
+              >
+                <StarIcon size="1x" class="text-yellow-500 fill-current" />
+                <span class="pl-1">{project.stargazerCount}</span>
+              </div>
+            {/if}
+          </div>
+        {/if}
       </div>
 
       <!-- Description -->
@@ -45,19 +60,4 @@
       {/if}
     </div>
   </a>
-
-  {#if project.stargazerCount > 0}
-    <!-- Footer -->
-    <div class="flex flex-row px-2 py-1 space-x-4 rounded-lg bg-gray-50">
-      {#if project.stargazerCount > 0}
-        <div
-          class="flex flex-row items-center"
-          title="{project.stargazerCount} stars"
-        >
-          <StarIcon size="1x" class="text-yellow-500 fill-current" />
-          <span class="pl-1">{project.stargazerCount}</span>
-        </div>
-      {/if}
-    </div>
-  {/if}
 </Card>
