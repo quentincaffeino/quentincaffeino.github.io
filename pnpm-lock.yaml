@@ -69,8 +69,8 @@ importers:
         specifier: 4.2.20
         version: 4.2.20
       svelte-feather-icons:
-        specifier: 4.1.0
-        version: 4.1.0
+        specifier: 4.2.0
+        version: 4.2.0
       tailwindcss:
         specifier: 3.4.3
         version: 3.4.3
@@ -1808,8 +1808,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svelte-feather-icons@4.1.0:
-    resolution: {integrity: sha512-fcTL4VzEN4BoccQJjKiui0b9DWEsmO6zGpI0tQTJbthRtNrYheoU487zyA1BD8rj9kj6jbKGmGVo7zbSdRvMvA==}
+  svelte-feather-icons@4.2.0:
+    resolution: {integrity: sha512-KuMTDrL6sA8aCxBv3RMgmmnnyIaAXaYcmWkmNa2r2Qj70vi+An2T6ZBAdiZr6wjx+a3eZJy+FRseeRkzQFGHPw==}
 
   svelte-hmr@0.16.0:
     resolution: {integrity: sha512-Gyc7cOS3VJzLlfj7wKS0ZnzDVdv3Pn2IuVeJPk9m2skfhcu5bq3wtIZyQGggr7/Iim5rH5cncyQft/kRLupcnA==}
@@ -3695,7 +3695,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-feather-icons@4.1.0:
+  svelte-feather-icons@4.2.0:
     dependencies:
       svelte: 3.59.2
 
