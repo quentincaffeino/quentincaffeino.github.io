@@ -27,8 +27,8 @@ importers:
         specifier: 3.1.2
         version: 3.1.2(svelte@4.2.20)(vite@5.4.21(@types/node@20.19.27)(terser@5.44.1))
       '@vitest/coverage-istanbul':
-        specifier: 1.6.0
-        version: 1.6.0(vitest@1.6.1(@types/node@20.19.27)(happy-dom@20.0.11)(terser@5.44.1))
+        specifier: 1.6.1
+        version: 1.6.1(vitest@1.6.1(@types/node@20.19.27)(happy-dom@20.0.11)(terser@5.44.1))
       autoprefixer:
         specifier: 10.4.23
         version: 10.4.23(postcss@8.5.6)
@@ -686,10 +686,10 @@ packages:
   '@types/whatwg-mimetype@3.0.2':
     resolution: {integrity: sha512-c2AKvDT8ToxLIOUlN51gTiHXflsfIFisS4pO7pDPoKouJCESkhZnEy623gwP9laCy5lnLDAw1vAzu2vM2YLOrA==}
 
-  '@vitest/coverage-istanbul@1.6.0':
-    resolution: {integrity: sha512-h/BwpXehkkS0qsNCS00QxiupAqVkNi0WT19BR0dQvlge5oHghoSVLx63fABYFoKxVb7Ue7+k6V2KokmQ1zdMpg==}
+  '@vitest/coverage-istanbul@1.6.1':
+    resolution: {integrity: sha512-0NWKNPrbMo1s6emwnn+UpGPxrSEd9R6VpQ3wzYz0y43esZjjDkGLb6Qkvfu6LNyQO4TAGyepaZ11imUmmIFLaw==}
     peerDependencies:
-      vitest: 1.6.0
+      vitest: 1.6.1
 
   '@vitest/expect@1.6.1':
     resolution: {integrity: sha512-jXL+9+ZNIJKruofqXuuTClf44eSpcHlgj3CiuNihUF3Ioujtmc0zIa3UJOW5RjDK1YLBJZnWBlPuqhYycLioog==}
@@ -2516,7 +2516,7 @@ snapshots:
 
   '@types/whatwg-mimetype@3.0.2': {}
 
-  '@vitest/coverage-istanbul@1.6.0(vitest@1.6.1(@types/node@20.19.27)(happy-dom@20.0.11)(terser@5.44.1))':
+  '@vitest/coverage-istanbul@1.6.1(vitest@1.6.1(@types/node@20.19.27)(happy-dom@20.0.11)(terser@5.44.1))':
     dependencies:
       debug: 4.4.3
       istanbul-lib-coverage: 3.2.2
