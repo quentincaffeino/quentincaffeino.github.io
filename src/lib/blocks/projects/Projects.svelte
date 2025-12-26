@@ -41,15 +41,20 @@
   const personalProjects =
     data?.viewer?.repositories?.nodes
       ?.filter(filterOutForks)
-      ?.filter(project => project.name !== 'Kingdom') // This is Gosha's project
+      ?.filter(
+        (project) =>
+          project.name !== "Kingdom" && // This is Gosha's project
+          project.name !== "ai-tools", // This is Andrei's project
+      )
       ?.sort(sortByStars)
-      ?.sort(sortArchivedToEnd) || [];
+      ?.sort(sortArchivedToEnd)
+      || [];
 
   const contributionProjects =
     Object.values(data?.user || {})
       .reduce(
         (pv, cv) => [...pv, ...cv.pullRequestContributionsByRepository],
-        []
+        [],
       )
       .map((r) => r.repository)
       .filter(filterUniqueByKey((project) => project.name))

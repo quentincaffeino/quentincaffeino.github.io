@@ -4,5 +4,5 @@
  */
 export default function isResponseOk(response) {
   if (response.ok) return response;
-  else throw { error: `response from '${response.url}' is not ok`, response };
+  else throw { message: `response from '${(new URL(response.url)).host}' is not ok`, response };
 }

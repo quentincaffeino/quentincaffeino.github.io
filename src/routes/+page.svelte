@@ -17,7 +17,7 @@
   <title>{GH_USERNAME}</title>
 </svelte:head>
 
-<section class="h-screen">
+<section class="h-screen sm:h-[75vh]">
   <MainSection {userData} />
 </section>
 
