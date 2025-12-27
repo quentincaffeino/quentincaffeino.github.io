@@ -1,10 +1,11 @@
+
 # Using existing package management solution to automate Godot workflows
 
-Most software projects eventually rediscover the same lesson:
+Most software projects eventually relearn the same lesson:
 
 > If your tools are not part of your project, they will drift.
 
-This isn’t specific to games, Godot, or even programming languages. It shows up anywhere tooling lives outside version control - editors, compilers, linters, test runners, build systems. Tooling without a lockfile is like camping without a tent: you can do it, but it gets uncomfortable fast.
+This isn’t specific to games, Godot, or even programming languages. It shows up anywhere tooling lives outside version control - editors, compilers, linters, test runners, build systems. Tooling without a lockfile is like camping without a tent - you can do it, but it gets uncomfortable fast.
 
 When tools are installed “out of band”, teams compensate with:
 
@@ -17,7 +18,7 @@ These work, until they don’t.
 
 ## A familiar pattern from other ecosystems
 
-Other ecosystems have largely converged on a solution:
+Other ecosystems have largely converged on a simple idea:
 **treat tooling as dependencies, not prerequisites**.
 
 - Node projects install their toolchain locally
@@ -25,9 +26,7 @@ Other ecosystems have largely converged on a solution:
 - Rust ships cargo
 - Go vendors or pins module versions
 
-The result isn’t perfection, but it is repeatability.
-
-At the time (2-3 years ago), the Godot ecosystem didn't offer anything like this.
+At the time (2 to 3 years ago) at least from what I remember, the Godot ecosystem didn't offer anything like this.
 
 ## An observation: Godot already has an extension boundary
 
@@ -59,7 +58,7 @@ Rather than invent a new system, I experimented with borrowing an existing one. 
 
 The experiment was simple: can one of them install directly into `addons/`?
 
-With one of them, the answer was yes.
+With `pnpm`, the answer was yes.
 
 ## `pnpm` as a Godot add-on manager
 
@@ -79,15 +78,17 @@ modules-dir=addons
 }
 ```
 
-> Regularly you'd have the simple notation of "package name": "version", and in this case it would've created `@sometimes_youwin/gut` directory, which might not behave as we expect with Godot. We can use aliasing here by providing a different package name as a key and specific package details in the value.
+> Normally you'd have the simple notation of "package name": "version", and it would've created `@sometimes_youwin/gut` directory, which might not behave as we expect with Godot. We can use [aliasing](https://docs.npmjs.com/cli/v11/using-npm/package-spec#aliases) here by providing a different package name as a key and specific package details in the value.
+
+> Dependencies don't have to be published to npm registry. Node package managers also support downloading directly [from git](https://docs.npmjs.com/cli/v11/using-npm/package-spec#git-urls).
 
 - `pnpm install` will place [gut](https://github.com/bitwes/Gut) dependency directly into `addons/`
 - Godot will pick it up automatically
 - no copying, no post-processing, no custom scripts
 
 Under the hood, `pnpm` links packages into `addons/` from its content-addressed store, so Godot sees a normal-looking `addons/` tree without extra plumbing. If you want the nitty-gritty on how `pnpm` lays out `node_modules`, the official [docs](https://pnpm.io/symlinked-node-modules-structure) explain the symlinked structure and the store.
-From the engine's perspective, nothing special is happening.
-From the project's perspective, add-ons are now versioned, reproducible, and documented by a lockfile.
+From the engine’s perspective, nothing special is happening.
+From the project’s perspective, add-ons are now versioned, reproducible, and documented by a lockfile.
 
 ## Godot is Portable
 
@@ -96,11 +97,12 @@ If add-ons can be pulled in like any other dependency, the engine itself starts 
 
 In my setup, Godot itself is packaged as a development dependency. This is a custom wrapper, not an official package; the proof of concept lives here: https://github.com/quentincaffeino/godot-engine-npm/tree/dynamic-download.
 
-Unfortunately it became unbildable after these years for some reason. Originally it worked like this:
+Unfortunately, it’s no longer buildable after these years for some reason. Originally it worked like this:
 
-- artifact published in npm repository stores package.json, godot.json and install.js files
-- when you add it to the project it automatically runs install js
-- install script reads the contents of both json files to figure out version and where to get godot from, this is how godot.json looked like:
+- package artifact published in npm repository
+- it consists of package.json, godot.json and install.js files
+- when you add it to the project, it automatically runs install.js
+- the install script reads the contents of both JSON files to figure out version and where to get godot from, this is what godot.json looked like:
 ```jsonc
 # godot.json
 {
@@ -116,10 +118,10 @@ Unfortunately it became unbildable after these years for some reason. Originally
   }
 }
 ```
-- install js figures out your platform and downloads the correct zip file and extracts it into node bin folder
+- install.js figures out your platform, downloads the correct zip file, and extracts it into the Node bin folder
 - PROFIT
 
-> Today I wound't have used post install hook to automatically run install script. Reason for that would be the recent worm atack called **Shai‐Hulud** which ran malicious code on this same hook. Not having an automatic install is not a problem, many tools just add an extra step to setup to pull any needed binaries.
+> Today I wouldn’t use a post-install hook to automatically run the install script. The reason is the recent **Shai‐Hulud** worm which ran malicious code on this same hook. Skipping automatic install isn’t a problem; many tools add an extra setup step.
 
 What we get is:
 
@@ -144,9 +146,9 @@ Here is a small example of how I was using it:
 }
 ```
 
-> The `file:` notation is just for local testing. Full code could be found [here](https://github.com/quentincaffeino/godot-console/compare/develop...test-workflow).
+> The `file:` notation is just for local testing. Full code can be found [here](https://github.com/quentincaffeino/godot-console/compare/develop...test-workflow).
 
-> Usually node managed binaries in scripts could be invoked without a path but it didn't work at the time for some reason.
+> Usually, Node-managed binaries in scripts can be invoked without a path, but it didn’t work at the time for some reason.
 
 ## Running tests like any other project
 
@@ -190,7 +192,7 @@ jobs:
         run: pnpm ci:test
 ```
 
-We add another script to run it windowless:
+We add another script to run it headless:
 
 ```json
 # package.json
@@ -225,7 +227,7 @@ It is simply an example of how well-understood dependency management patterns ca
 
 ## Known limitations (potential, not confirmed)
 
-Windows symlink policy can be restrictive on some machines; `pnpm` documents its Windows behavior and requirements if you hit issues. Here is what they say on the [offical doc](https://pnpm.io/faq#does-it-work-on-windows):
+Windows symlink policy can be restrictive on some machines; `pnpm` documents its Windows behavior and requirements if you hit issues. Here is what they say on the [official doc](https://pnpm.io/faq#does-it-work-on-windows):
 
 > Short answer: Yes. Long answer: Using symbolic linking on Windows is problematic to say the least, however, pnpm has a workaround. For Windows, we use [junctions](https://docs.microsoft.com/en-us/windows/win32/fileio/hard-links-and-junctions) instead.
 
