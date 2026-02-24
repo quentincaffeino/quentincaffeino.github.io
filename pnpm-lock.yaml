@@ -16,7 +16,7 @@ importers:
         version: 1.41.2
       '@rollup/plugin-graphql':
         specifier: 2.0.4
-        version: 2.0.4(graphql@16.8.1)(rollup@4.54.0)
+        version: 2.0.4(graphql@16.13.0)(rollup@4.54.0)
       '@sveltejs/adapter-static':
         specifier: 3.0.10
         version: 3.0.10(@sveltejs/kit@2.49.2(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.20)(vite@5.4.21(@types/node@20.19.27)(terser@5.44.1)))(svelte@4.2.20)(vite@5.4.21(@types/node@20.19.27)(terser@5.44.1)))
@@ -36,8 +36,8 @@ importers:
         specifier: 17.2.3
         version: 17.2.3
       graphql:
-        specifier: 16.8.1
-        version: 16.8.1
+        specifier: 16.13.0
+        version: 16.13.0
       happy-dom:
         specifier: 20.0.11
         version: 20.0.11
@@ -1138,7 +1138,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   gopd@1.2.0:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
@@ -1153,8 +1153,8 @@ packages:
     peerDependencies:
       graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
 
-  graphql@16.8.1:
-    resolution: {integrity: sha512-59LZHPdGZVh695Ud9lRzPBVTtlX9ZCV150Er2W43ro37wVof0ctenSaskPPjN7lVTIN8mSZt8PHUNKZuNQUuxw==}
+  graphql@16.13.0:
+    resolution: {integrity: sha512-uSisMYERbaB9bkA9M4/4dnqyktaEkf1kMHNKq/7DHyxVeWqHQ2mBmVqm5u6/FVHwF3iCNalKcg82Zfl+tffWoA==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
 
   happy-dom@20.0.11:
@@ -2368,11 +2368,11 @@ snapshots:
 
   '@polka/url@1.0.0-next.29': {}
 
-  '@rollup/plugin-graphql@2.0.4(graphql@16.8.1)(rollup@4.54.0)':
+  '@rollup/plugin-graphql@2.0.4(graphql@16.13.0)(rollup@4.54.0)':
     dependencies:
       '@rollup/pluginutils': 5.3.0(rollup@4.54.0)
-      graphql: 16.8.1
-      graphql-tag: 2.12.6(graphql@16.8.1)
+      graphql: 16.13.0
+      graphql-tag: 2.12.6(graphql@16.13.0)
     optionalDependencies:
       rollup: 4.54.0
 
@@ -3024,12 +3024,12 @@ snapshots:
 
   graceful-fs@4.2.11: {}
 
-  graphql-tag@2.12.6(graphql@16.8.1):
+  graphql-tag@2.12.6(graphql@16.13.0):
     dependencies:
-      graphql: 16.8.1
+      graphql: 16.13.0
       tslib: 2.8.1
 
-  graphql@16.8.1: {}
+  graphql@16.13.0: {}
 
   happy-dom@20.0.11:
     dependencies:
