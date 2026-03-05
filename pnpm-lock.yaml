@@ -33,8 +33,8 @@ importers:
         specifier: 10.4.27
         version: 10.4.27(postcss@8.5.8)
       dotenv:
-        specifier: 17.2.3
-        version: 17.2.3
+        specifier: 17.3.1
+        version: 17.3.1
       graphql:
         specifier: 16.13.0
         version: 16.13.0
@@ -986,8 +986,8 @@ packages:
     engines: {'0': node >=0.2.6}
     hasBin: true
 
-  dotenv@17.2.3:
-    resolution: {integrity: sha512-JVUnt+DUIzu87TABbhPmNfVdBDt18BLOWjMUFJMSi/Qqg7NTYtabbvSNJGOJ7afbRuv9D/lngizHtP7QyLQ+9w==}
+  dotenv@17.3.1:
+    resolution: {integrity: sha512-IO8C/dzEb6O3F9/twg6ZLXz164a2fhTnEWb95H23Dm4OuN+92NmEAlTrupP9VW6Jm3sO26tQlqyvyi4CsnY9GA==}
     engines: {node: '>=12'}
 
   dunder-proto@1.0.1:
@@ -2821,7 +2821,7 @@ snapshots:
 
   dot@1.1.3: {}
 
-  dotenv@17.2.3: {}
+  dotenv@17.3.1: {}
 
   dunder-proto@1.0.1:
     dependencies:
