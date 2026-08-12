@@ -26,7 +26,7 @@
     "autoprefixer": "10.4.27",
     "dotenv": "17.2.3",
     "graphql": "16.13.0",
-    "happy-dom": "20.0.11",
+    "happy-dom": "20.8.9",
     "html-minifier-terser": "7.2.0",
     "lodash.merge": "4.6.2",
     "npm-run-all2": "8.0.4",
